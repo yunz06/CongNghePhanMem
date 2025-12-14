@@ -126,6 +126,6 @@ Module này bao gồm:
 
 ---
 
-**Người viết:** Leader - Thành viên 1
+**Người viết:** Lâm Minh Phú - MSSV: 096206003648
 **Ngày tạo:** [Ngày hiện tại]
 **Phiên bản:** 1.0
