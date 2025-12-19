@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'; // Nhớ cài: npm install axios
+import axios from 'axios';
 
 const AssignmentPage = () => {
   const [paperId, setPaperId] = useState('');
@@ -10,7 +10,7 @@ const AssignmentPage = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
 
-  // 1. Hàm gọi AI Gợi ý (Tính năng ăn tiền của bạn)
+  // Gọi AI Gợi ý
   const handleGetAiSuggestion = async () => {
     if (!paperId) return alert("Vui lòng nhập ID bài báo!");
     setLoading(true);
@@ -18,17 +18,10 @@ const AssignmentPage = () => {
     setMessage('');
     
     try {
-      // Gọi API Auto-Assign của Backend
-      const res = await axios.post('http://127.0.0.1:5000/api/auto-assign', {
-        paper_id: paperId
-      });
-      
+      const res = await axios.post('http://127.0.0.1:5000/api/auto-assign', { paper_id: paperId });
       setPaperTitle(res.data.paper_title);
-      setAiReasoning(res.data.ai_suggestion); // Hiển thị lời khuyên của AI
-      
-      // Sau khi AI gợi ý, tải luôn danh sách Reviewer để Admin chọn
+      setAiReasoning(res.data.ai_suggestion);
       fetchAvailableReviewers();
-      
     } catch (err) {
       console.error(err);
       setMessage('Lỗi: ' + (err.response?.data?.error || "Không gọi được AI"));
@@ -37,20 +30,17 @@ const AssignmentPage = () => {
     }
   };
 
-  // 2. Hàm lấy danh sách Reviewer (Đã lọc COI)
+  // Lấy danh sách Reviewer
   const fetchAvailableReviewers = async () => {
     try {
       const res = await axios.get(`http://127.0.0.1:5000/api/reviewers-available/${paperId}`);
       setReviewers(res.data);
-    } catch (err) {
-      console.error(err);
-    }
+    } catch (err) { console.error(err); }
   };
 
-  // 3. Hàm Lưu phân công (Admin chốt đơn)
+  // Lưu phân công
   const handleAssign = async () => {
     if (!selectedReviewer) return alert("Chưa chọn Reviewer!");
-    
     try {
       const res = await axios.post('http://127.0.0.1:5000/api/assign', {
         paper_id: paperId,
@@ -63,59 +53,31 @@ const AssignmentPage = () => {
   };
 
   return (
-    <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
+    <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto', fontFamily: 'Arial' }}>
       <h1>🎓 Phân Công Phản Biện (AI Support)</h1>
-      
-      {/* KHUNG NHẬP ID BÀI BÁO */}
       <div style={{ marginBottom: '20px' }}>
-        <label>Nhập ID Bài báo cần chấm: </label>
-        <input 
-          type="number" 
-          value={paperId} 
-          onChange={(e) => setPaperId(e.target.value)}
-          placeholder="VD: 1"
-          style={{ padding: '8px', marginRight: '10px' }}
-        />
-        <button onClick={handleGetAiSuggestion} disabled={loading} style={{ padding: '8px 15px', cursor: 'pointer' }}>
-          {loading ? "AI đang đọc bài..." : "🤖 Hỏi ý kiến AI"}
+        <label>Nhập ID Bài báo: </label>
+        <input type="number" value={paperId} onChange={(e) => setPaperId(e.target.value)} placeholder="VD: 1" style={{ padding: '8px', margin: '0 10px' }} />
+        <button onClick={handleGetAiSuggestion} disabled={loading} style={{ padding: '8px 15px', cursor: 'pointer', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '4px' }}>
+          {loading ? "AI đang đọc..." : "🤖 Hỏi ý kiến AI"}
         </button>
       </div>
 
-      {/* KHUNG KẾT QUẢ AI */}
       {paperTitle && (
-        <div style={{ border: '1px solid #ddd', padding: '15px', borderRadius: '5px', backgroundColor: '#f9f9f9' }}>
-          <h3>📄 Bài báo: {paperTitle}</h3>
-          
-          <div style={{ backgroundColor: '#e3f2fd', padding: '10px', borderRadius: '5px', marginBottom: '15px' }}>
+        <div style={{ border: '1px solid #ddd', padding: '15px', borderRadius: '8px', backgroundColor: '#f8f9fa' }}>
+          <h3>📄 Bài: {paperTitle}</h3>
+          <div style={{ backgroundColor: '#e2e3e5', padding: '10px', borderRadius: '5px', marginBottom: '15px', borderLeft: '5px solid #28a745' }}>
             <strong>💡 AI Gemini đề xuất:</strong>
-            <p style={{ whiteSpace: 'pre-line' }}>{aiReasoning}</p>
+            <p style={{ whiteSpace: 'pre-line', marginTop: '5px' }}>{aiReasoning}</p>
           </div>
-
-          {/* DROPDOWN CHỌN NGƯỜI */}
           <div>
-            <label><strong>Chọn Reviewer: </strong></label>
-            <select 
-              value={selectedReviewer} 
-              onChange={(e) => setSelectedReviewer(e.target.value)}
-              style={{ padding: '8px', marginLeft: '10px', width: '200px' }}
-            >
+            <select value={selectedReviewer} onChange={(e) => setSelectedReviewer(e.target.value)} style={{ padding: '8px', width: '60%' }}>
               <option value="">-- Chọn Giám Khảo --</option>
-              {reviewers.map((r) => (
-                <option key={r.id} value={r.id}>
-                  ID {r.id} - {r.name} ({r.email})
-                </option>
-              ))}
+              {reviewers.map((r) => (<option key={r.id} value={r.id}>ID {r.id} - {r.name}</option>))}
             </select>
-            
-            <button 
-              onClick={handleAssign}
-              style={{ marginLeft: '10px', padding: '8px 20px', backgroundColor: '#4CAF50', color: 'white', border: 'none', cursor: 'pointer' }}
-            >
-              💾 Xác nhận Phân công
-            </button>
+            <button onClick={handleAssign} style={{ marginLeft: '10px', padding: '8px 20px', backgroundColor: '#28a745', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>💾 Lưu</button>
           </div>
-          
-          {message && <p style={{ marginTop: '10px', fontWeight: 'bold' }}>{message}</p>}
+          {message && <p style={{ marginTop: '15px', fontWeight: 'bold', color: message.includes('✅') ? 'green' : 'red' }}>{message}</p>}
         </div>
       )}
     </div>

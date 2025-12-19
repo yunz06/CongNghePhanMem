@@ -17,6 +17,9 @@ def get_db_connection():
         return None
 
 # Hàm lấy Model AI
+# ... (các đoạn trên giữ nguyên)
+
 def get_ai_model():
     genai.configure(api_key=GEMINI_KEY)
-    return genai.GenerativeModel('gemini-1.5-flash')
+    # SỬA DÒNG DƯỚI ĐÂY:
+    return genai.GenerativeModel('gemini-pro')
