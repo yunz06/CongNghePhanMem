@@ -41,20 +41,15 @@ def auto_assign():
     Chỉ trả về định dạng ngắn gọn: "Tôi đề xuất [Tên Reviewer] (ID [Số ID]) vì [Lý do ngắn gọn]".
     """
     
+# ...
     try:
         response = model.generate_content(prompt)
         ai_suggestion = response.text
     except Exception as e:
-        # --- SỬA ĐOẠN NÀY ---
-        # Thay vì hiện lỗi, ta hiện luôn kết quả giả lập để nộp bài
-        print(f"Lỗi AI thật sự là: {e}") # In lỗi ra terminal để mình biết
-        ai_suggestion = """Tôi đề xuất: Dr. AI Expert (ID 3).
-        
-        Lý do:
-        - Giám khảo này có chuyên môn sâu về 'Deep Learning' và 'Y tế'.
-        - Lịch sử chấm bài uy tín, chưa bị quá tải.
-        - Không có xung đột lợi ích với tác giả."""
-        # --------------------
+        # TRẢ VỀ LỖI THẬT (Không fake nữa)
+        print(f"Lỗi AI: {e}")
+        ai_suggestion = "Xin lỗi, AI đang bận hoặc gặp sự cố kết nối. Vui lòng thử lại sau."
+    # ...
     
     cur.close()
     conn.close()
