@@ -45,3 +45,10 @@ UTH-ConfMS/
 │   └── UseCase_Login_Register.html # Sơ đồ Use Case
 │
 └── 📄 README.md                # File giới thiệu này
+
+# Đồ án Công Nghệ Phần Mềm
+
+## 🔗 Link Tài Nguyên Quan Trọng (Nhóm Zalo)
+* **GitHub Repository:** https://github.com/yunz06/CongNghePhanMem
+* **Quản lý dự án (Jira):** https://nhomcnpm.atlassian.net
+* **Cơ sở dữ liệu (Neon DB):** https://console.neon.tech/app/projects/young-meadow-72778146
