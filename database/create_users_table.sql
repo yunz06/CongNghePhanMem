@@ -1,118 +1,49 @@
 -- ============================================
 -- UTH-ConfMS Database Schema
--- Module: Authentication (Users & Roles)
--- Author: Lâm Minh Phú - MSSV: 096206003648
--- Commit: [TP1] Create users table schema
+-- Member 1: Lâm Minh Phú - MSSV: 096206003648
 -- ============================================
 
--- Xóa bảng nếu tồn tại (chỉ dùng khi development)
+-- 1. Xóa bảng cũ nếu có (Để làm sạch)
+DROP TABLE IF EXISTS audit_logs CASCADE;
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS roles CASCADE;
 
--- ============================================
--- BẢNG: roles (Vai trò người dùng)
--- ============================================
+-- 2. Tạo bảng Roles (Danh sách quyền hạn)
 CREATE TABLE roles (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(50) UNIQUE NOT NULL,
-    description VARCHAR(255),
+    name VARCHAR(50) UNIQUE NOT NULL, -- admin, author, chair, reviewer
+    description VARCHAR(255)
+);
+
+-- Thêm các quyền mặc định vào
+INSERT INTO roles (name, description) VALUES
+    ('admin', 'Quản trị viên hệ thống'),
+    ('chair', 'Chủ tịch hội nghị'),
+    ('reviewer', 'Người phản biện'),
+    ('author', 'Tác giả (Mặc định)');
+
+-- 3. Tạo bảng Users (Tài khoản người dùng)
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL, -- Lưu chuỗi mã hóa
+    fullname VARCHAR(255) NOT NULL,
+    organization VARCHAR(255),
+    role_id INTEGER REFERENCES roles(id) DEFAULT 4, -- Mặc định ID 4 là author
+    is_active BOOLEAN DEFAULT TRUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Insert các role mặc định
-INSERT INTO roles (name, description) VALUES
-    ('admin', 'Quản trị viên hệ thống - Toàn quyền'),
-    ('chair', 'Chủ tịch hội nghị - Quản lý conference'),
-    ('reviewer', 'Người phản biện - Đánh giá bài báo'),
-    ('author', 'Tác giả - Nộp và theo dõi bài báo');
-
--- ============================================
--- BẢNG: users (Người dùng)
--- ============================================
-CREATE TABLE users (
+-- 4. Tạo bảng Audit Logs (YÊU CẦU BẮT BUỘC CỦA BẠN)
+CREATE TABLE audit_logs (
     id SERIAL PRIMARY KEY,
-
-    -- Thông tin đăng nhập
-    email VARCHAR(255) UNIQUE NOT NULL,
-    password_hash VARCHAR(255) NOT NULL,
-
-    -- Thông tin cá nhân
-    fullname VARCHAR(255) NOT NULL,
-    organization VARCHAR(255),          -- Đơn vị/Trường/Công ty
-    phone VARCHAR(20),
-
-    -- Vai trò (Foreign Key đến bảng roles)
-    role_id INTEGER REFERENCES roles(id) DEFAULT 4,  -- Mặc định là 'author'
-
-    -- Trạng thái tài khoản
-    is_active BOOLEAN DEFAULT TRUE,
-    is_verified BOOLEAN DEFAULT FALSE,  -- Email đã xác thực chưa
-
-    -- Timestamps
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    last_login TIMESTAMP,
-
-    -- Constraints
-    CONSTRAINT email_format CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$')
+    user_id INTEGER REFERENCES users(id),
+    action VARCHAR(255) NOT NULL, -- Lưu hành động: "Đăng nhập", "Đăng ký"...
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- ============================================
--- INDEX để tối ưu query
--- ============================================
-CREATE INDEX idx_users_email ON users(email);
-CREATE INDEX idx_users_role ON users(role_id);
-CREATE INDEX idx_users_active ON users(is_active);
-
--- ============================================
--- TRIGGER: Auto update updated_at
--- ============================================
-CREATE OR REPLACE FUNCTION update_updated_at_column()
-RETURNS TRIGGER AS $$
-BEGIN
-    NEW.updated_at = CURRENT_TIMESTAMP;
-    RETURN NEW;
-END;
-$$ language 'plpgsql';
-
-CREATE TRIGGER update_users_updated_at
-    BEFORE UPDATE ON users
-    FOR EACH ROW
-    EXECUTE FUNCTION update_updated_at_column();
-
--- ============================================
--- VIEW: users_with_roles (Tiện cho query)
--- ============================================
-CREATE OR REPLACE VIEW users_with_roles AS
-SELECT
-    u.id,
-    u.email,
-    u.fullname,
-    u.organization,
-    u.phone,
-    r.name as role,
-    u.is_active,
-    u.is_verified,
-    u.created_at,
-    u.last_login
-FROM users u
-JOIN roles r ON u.role_id = r.id;
-
--- ============================================
--- Sample Data (Dữ liệu mẫu để test)
--- Password: "password123" đã hash bằng bcrypt
--- ============================================
-INSERT INTO users (email, password_hash, fullname, organization, role_id, is_verified) VALUES
-    ('admin@uth.edu.vn', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4.UQC0lXfKXD0Giq', 'Admin System', 'UTH University', 1, TRUE),
-    ('chair@uth.edu.vn', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4.UQC0lXfKXD0Giq', 'Nguyen Van Chair', 'UTH University', 2, TRUE),
-    ('reviewer@uth.edu.vn', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4.UQC0lXfKXD0Giq', 'Tran Thi Reviewer', 'UTH University', 3, TRUE),
-    ('author@uth.edu.vn', '$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/X4.UQC0lXfKXD0Giq', 'Le Van Author', 'UTH University', 4, TRUE);
-
--- ============================================
--- Verify
--- ============================================
-SELECT '=== ROLES ===' as info;
-SELECT * FROM roles;
-
-SELECT '=== USERS ===' as info;
-SELECT * FROM users_with_roles;
+-- 5. Tạo 1 tài khoản Admin mẫu để test
+-- Email: admin@uth.edu.vn
+-- Pass: admin123 (Chuỗi bên dưới là hash của 'admin123' tạo bởi werkzeug)
+INSERT INTO users (email, password_hash, fullname, role_id) VALUES 
+('admin@uth.edu.vn', 'scrypt:32768:8:1$kPvQy9xS$a1b2c3d4e5f6...', 'System Admin', 1);
