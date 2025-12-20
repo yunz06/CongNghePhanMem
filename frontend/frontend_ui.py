@@ -1,46 +1,121 @@
 import streamlit as st
-import pandas as pd
+import requests
+import time
 
-st.set_page_config(page_title="Hệ thống Duyệt Bài - TP6", layout="wide")
-st.title("TP6: HỘI ĐỒNG RA QUYẾT ĐỊNH")
+# --- CẤU HÌNH ---
+API = "http://127.0.0.1:5000/api/decision"
+st.set_page_config(page_title="Hệ thống Xét duyệt", layout="wide")
 
-if 'data' not in st.session_state:
-    st.session_state.data = [
-        {"ID": 101, "Tên bài báo": "Nghiên cứu AI trong Y tế", "Tác giả": "Nguyen Van A", "Điểm TB": 8.5, "Trạng thái": "REVIEWED"},
-        {"ID": 102, "Tên bài báo": "Blockchain và IoT", "Tác giả": "Tran Thi B", "Điểm TB": 4.5, "Trạng thái": "REVIEWED"},
-        {"ID": 103, "Tên bài báo": "An toàn thông tin 2025", "Tác giả": "Le Van C", "Điểm TB": 7.0, "Trạng thái": "REVIEWED"},
-        {"ID": 104, "Tên bài báo": "Phân tích dữ liệu lớn", "Tác giả": "Pham Van D", "Điểm TB": 9.0, "Trạng thái": "ACCEPTED"}
-    ]
+# --- CSS (Giữ nguyên cho đẹp) ---
+st.markdown("""
+<style>
+    [data-testid="stSidebar"] h1 { font-size: 30px !important; color: #0d47a1 !important; text-transform: uppercase; }
+    .info-box { text-align: left !important; color: #546e7a !important; font-weight: bold; }
+    [data-testid="stSidebar"] button { background-color: #007bff !important; color: white !important; }
+    .stButton button[kind="primary"] { background-color: #28a745 !important; color: white !important; }
+    .stButton button[kind="secondary"] { color: #dc3545 !important; border: 1px solid #dc3545 !important; background-color: white !important; }
+    .status-box { padding: 5px; border-radius: 5px; text-align: center; font-weight: bold; font-size: 14px; }
+    .accepted { background-color: #E6F4EA; color: #1E8E3E; }
+    .rejected { background-color: #FCE8E6; color: #D93025; }
+    .waiting { background-color: #F3F4F6; color: #5F6368; }
+</style>
+""", unsafe_allow_html=True)
 
-df = pd.DataFrame(st.session_state.data)
-col1, col2 = st.columns([2, 1])
+# --- SIDEBAR: NƠI NHẬP TÀI KHOẢN ADMIN ---
+with st.sidebar:
+    st.image("https://portal.ut.edu.vn/images/logo_full.png", width=250)
+    st.title("Admin Portal")
+    st.markdown('<div class="info-box">TP6 - Decision Support</div>', unsafe_allow_html=True)
+    st.divider()
 
-with col1:
-    st.subheader("Danh sách bài báo")
-    st.dataframe(df, use_container_width=True)
-
-with col2:
-    st.subheader("Ra Quyết Định")
-    paper_ids = [p['ID'] for p in st.session_state.data if p['Trạng thái'] == 'REVIEWED']
+    # --- KHU VỰC CẤU HÌNH EMAIL ---
+    st.markdown("### Nhập tài khoảng Admin")
     
-    if not paper_ids:
-        st.info("Không còn bài chờ duyệt.")
-    else:
-        selected_id = st.selectbox("Chọn ID bài báo:", paper_ids)
-        comment = st.text_area("Nhận xét:")
-        
-        c1, c2 = st.columns(2)
-        with c1:
-            if st.button("DUYỆT (Accept)", type="primary", use_container_width=True):
-                for p in st.session_state.data:
-                    if p['ID'] == selected_id:
-                        p['Trạng thái'] = 'ACCEPTED'
-                st.success(f"Đã DUYỆT bài {selected_id}")
-                st.rerun()
-        with c2:
-            if st.button("LOẠI (Reject)", use_container_width=True):
-                for p in st.session_state.data:
-                    if p['ID'] == selected_id:
-                        p['Trạng thái'] = 'REJECTED'
-                st.error(f"Đã LOẠI bài {selected_id}")
-                st.rerun()
+    
+    # Ô nhập Email Admin
+    admin_email = st.text_input("Gmail của bạn:", placeholder="admin@gmail.com")
+    # Ô nhập Pass Admin (ẩn ký tự bằng type='password')
+    admin_pass = st.text_input("Mật khẩu ứng dụng:", type="password", help="Mã 16 ký tự Google cấp")
+    
+    st.divider()
+    
+    st.subheader("Báo cáo (TP7)")
+    if st.button("📥 Xuất Kỷ Yếu (.xlsx)", type="primary"):
+        try:
+            res = requests.get(f"{API}/export")
+            if res.status_code == 200:
+                st.download_button("Tải file về", res.content, "KyYeu.xlsx")
+        except: st.error("Lỗi Server!")
+
+    st.write(""); st.write("")
+    if st.button("🔄 Reset Dữ liệu"):
+        requests.post(f"{API}/reset")
+        st.rerun()
+
+# --- MAIN PAGE ---
+st.title("HỘI ĐỒNG XÉT DUYỆT")
+
+try:
+    res = requests.get(f"{API}/papers")
+    papers = res.json()['data'] if res.status_code == 200 else []
+except: papers = []
+
+if not papers:
+    st.error("⚠️ Hãy chạy Backend: python run_server.py")
+else:
+    c1, c2, c3 = st.columns(3)
+    c1.metric("Tổng hồ sơ", len(papers))
+    c2.metric("Đã Duyệt", len([p for p in papers if p['status']=='ACCEPTED']))
+    c3.metric("Chờ xử lý", len([p for p in papers if p['status']=='REVIEWED']))
+    st.divider()
+
+    for p in papers:
+        with st.container(border=True):
+            col1, col2, col3 = st.columns([3, 1, 1.5])
+            with col1:
+                st.subheader(p['title'])
+                st.text(f"TG: {p['author']} | Điểm: {p['score']}")
+                
+                # --- GỬI MAIL LINH HOẠT ---
+                if p['status'] != 'REVIEWED':
+                    with st.expander(f"📧 Gửi Email thông báo"):
+                        # Ô nhập người nhận (Người dùng tự nhập)
+                        email_to = st.text_input("Người nhận:", value="", key=f"mail_{p['id']}", placeholder="nhap_email_nguoi_nhan@gmail.com")
+                        
+                        if st.button("📤 Gửi ngay", key=f"btn_{p['id']}"):
+                            # 1. Kiểm tra đã nhập tài khoản Admin chưa
+                            if not admin_email or not admin_pass:
+                                st.error("❌ Vui lòng nhập Gmail & Mật khẩu ứng dụng ở thanh bên trái (Sidebar) trước!")
+                            # 2. Kiểm tra đã nhập người nhận chưa
+                            elif not email_to:
+                                st.warning("Vui lòng nhập email người nhận!")
+                            else:
+                                with st.spinner("Đang đăng nhập và gửi..."):
+                                    # Gửi tất cả thông tin xuống Backend
+                                    payload = {
+                                        "id": p['id'],
+                                        "email_to": email_to,       # Gửi cho ai
+                                        "sender_email": admin_email, # Gửi bằng tài khoản nào
+                                        "sender_pass": admin_pass    # Mật khẩu là gì
+                                    }
+                                    api = requests.post(f"{API}/send-email", json=payload)
+                                    
+                                    if api.status_code == 200:
+                                        st.success(f"✅ Đã gửi thành công tới {email_to}")
+                                    else:
+                                        st.error(f"Lỗi: {api.json().get('message')}")
+
+            with col2:
+                if p['status'] == 'ACCEPTED': st.markdown('<div class="status-box accepted">Đã Duyệt</div>', unsafe_allow_html=True)
+                elif p['status'] == 'REJECTED': st.markdown('<div class="status-box rejected">Đã Loại</div>', unsafe_allow_html=True)
+                else: st.markdown('<div class="status-box waiting">Đang chờ</div>', unsafe_allow_html=True)
+
+            with col3:
+                if p['status'] == 'REVIEWED':
+                    c1, c2 = st.columns(2)
+                    if c1.button("Duyệt", key=f"ok_{p['id']}", type="primary"):
+                        requests.post(f"{API}/make", json={"paper_id": p['id'], "decision": "ACCEPTED"})
+                        st.rerun()
+                    if c2.button("Loại", key=f"no_{p['id']}", type="secondary"):
+                        requests.post(f"{API}/make", json={"paper_id": p['id'], "decision": "REJECTED"})
+                        st.rerun()
