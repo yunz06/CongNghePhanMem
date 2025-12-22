@@ -10,7 +10,7 @@ from email.mime.multipart import MIMEMultipart
 
 decision_bp = Blueprint('decision', __name__)
 
-# --- DỮ LIỆU MẪU ---
+#  DỮ LIỆU MẪU 
 INITIAL_DATA = [
     {"id": "BB01", "title": "Nghiên cứu AI trong chẩn đoán Y tế", "author": "Dương Ngọc Yến Nhi", "score": 8.5, "status": "REVIEWED", "date": "2025-01-10"},
     {"id": "BB02", "title": "Ứng dụng Blockchain trong Logistic", "author": "Trần Minh Quân", "score": 9.5, "status": "REVIEWED", "date": "2025-01-11"},
@@ -86,7 +86,6 @@ def send_email_notification():
         try:
             msg = MIMEMultipart()
             
-            # 
             msg['From'] = f"Hội đồng Xét duyệt - Trường ĐH GTVT TP.HCM <{sender_email}>"
             
             msg['To'] = email_to
