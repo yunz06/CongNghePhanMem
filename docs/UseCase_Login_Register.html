@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Case Diagram - Login & Register</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+        }
+        .diagram-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        svg {
+            display: block;
+            margin: 0 auto;
+        }
+        /* Actor styling */
+        .actor-body {
+            fill: none;
+            stroke: #333;
+            stroke-width: 2;
+        }
+        .actor-head {
+            fill: #ffeaa7;
+            stroke: #333;
+            stroke-width: 2;
+        }
+        .actor-label {
+            font-size: 14px;
+            font-weight: bold;
+            text-anchor: middle;
+            fill: #2d3436;
+        }
+        /* Use case styling */
+        .use-case {
+            fill: #dfe6e9;
+            stroke: #2d3436;
+            stroke-width: 2;
+        }
+        .use-case-primary {
+            fill: #74b9ff;
+            stroke: #0984e3;
+            stroke-width: 2;
+        }
+        .use-case-extend {
+            fill: #ffeaa7;
+            stroke: #fdcb6e;
+            stroke-width: 2;
+        }
+        .use-case-label {
+            font-size: 12px;
+            text-anchor: middle;
+            fill: #2d3436;
+        }
+        /* System boundary */
+        .system-boundary {
+            fill: none;
+            stroke: #636e72;
+            stroke-width: 2;
+            stroke-dasharray: 10,5;
+        }
+        .system-label {
+            font-size: 16px;
+            font-weight: bold;
+            fill: #636e72;
+        }
+        /* Lines */
+        .association {
+            stroke: #2d3436;
+            stroke-width: 2;
+            fill: none;
+        }
+        .extend-line {
+            stroke: #636e72;
+            stroke-width: 1.5;
+            stroke-dasharray: 5,3;
+            fill: none;
+        }
+        .stereotype {
+            font-size: 10px;
+            font-style: italic;
+            fill: #636e72;
+        }
+        /* Legend */
+        .legend {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .legend h3 {
+            margin-bottom: 15px;
+            color: #2d3436;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .legend-box {
+            width: 40px;
+            height: 25px;
+            border-radius: 12px;
+            margin-right: 15px;
+            border: 2px solid;
+        }
+        .info-section {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .info-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #0984e3;
+        }
+        .info-card h4 {
+            color: #0984e3;
+            margin-bottom: 10px;
+        }
+        .info-card ul {
+            margin-left: 20px;
+        }
+        .info-card li {
+            margin: 5px 0;
+            color: #636e72;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Use Case Diagram</h1>
+        <p class="subtitle">UTH-ConfMS - Module Authentication (Login & Register)</p>
+
+        <div class="diagram-container">
+            <svg width="800" height="500" viewBox="0 0 800 500">
+                <!-- System Boundary -->
+                <rect x="200" y="30" width="450" height="440" rx="15" class="system-boundary"/>
+                <text x="425" y="55" class="system-label">UTH-ConfMS Authentication System</text>
+
+                <!-- Actor: Guest -->
+                <g transform="translate(80, 150)">
+                    <!-- Head -->
+                    <circle cx="0" cy="0" r="20" class="actor-head"/>
+                    <!-- Body -->
+                    <line x1="0" y1="20" x2="0" y2="60" class="actor-body"/>
+                    <!-- Arms -->
+                    <line x1="-25" y1="35" x2="25" y2="35" class="actor-body"/>
+                    <!-- Legs -->
+                    <line x1="0" y1="60" x2="-20" y2="100" class="actor-body"/>
+                    <line x1="0" y1="60" x2="20" y2="100" class="actor-body"/>
+                    <!-- Label -->
+                    <text x="0" y="120" class="actor-label">Guest</text>
+                </g>
+
+                <!-- Actor: User -->
+                <g transform="translate(80, 350)">
+                    <!-- Head -->
+                    <circle cx="0" cy="0" r="20" class="actor-head"/>
+                    <!-- Body -->
+                    <line x1="0" y1="20" x2="0" y2="60" class="actor-body"/>
+                    <!-- Arms -->
+                    <line x1="-25" y1="35" x2="25" y2="35" class="actor-body"/>
+                    <!-- Legs -->
+                    <line x1="0" y1="60" x2="-20" y2="100" class="actor-body"/>
+                    <line x1="0" y1="60" x2="20" y2="100" class="actor-body"/>
+                    <!-- Label -->
+                    <text x="0" y="120" class="actor-label">User</text>
+                </g>
+
+                <!-- Actor: Database (System) -->
+                <g transform="translate(720, 250)">
+                    <rect x="-30" y="-40" width="60" height="80" rx="5" fill="#dfe6e9" stroke="#636e72" stroke-width="2"/>
+                    <ellipse cx="0" cy="-40" rx="30" ry="10" fill="#b2bec3" stroke="#636e72" stroke-width="2"/>
+                    <ellipse cx="0" cy="40" rx="30" ry="10" fill="#dfe6e9" stroke="#636e72" stroke-width="2"/>
+                    <text x="0" y="70" class="actor-label">Database</text>
+                </g>
+
+                <!-- Use Case 1: Register -->
+                <ellipse cx="350" cy="120" rx="90" ry="35" class="use-case-primary"/>
+                <text x="350" y="117" class="use-case-label">UC-01</text>
+                <text x="350" y="133" class="use-case-label">Đăng ký (Register)</text>
+
+                <!-- Use Case 2: Login -->
+                <ellipse cx="350" cy="220" rx="90" ry="35" class="use-case-primary"/>
+                <text x="350" y="217" class="use-case-label">UC-02</text>
+                <text x="350" y="233" class="use-case-label">Đăng nhập (Login)</text>
+
+                <!-- Use Case 3: Validate Email -->
+                <ellipse cx="520" cy="100" rx="70" ry="28" class="use-case-extend"/>
+                <text x="520" y="97" class="use-case-label">Kiểm tra</text>
+                <text x="520" y="112" class="use-case-label">Email trùng</text>
+
+                <!-- Use Case 4: Hash Password -->
+                <ellipse cx="520" cy="170" rx="70" ry="28" class="use-case-extend"/>
+                <text x="520" y="167" class="use-case-label">Mã hóa</text>
+                <text x="520" y="182" class="use-case-label">Password</text>
+
+                <!-- Use Case 5: Create Session -->
+                <ellipse cx="520" cy="250" rx="70" ry="28" class="use-case-extend"/>
+                <text x="520" y="247" class="use-case-label">Tạo JWT</text>
+                <text x="520" y="262" class="use-case-label">Token</text>
+
+                <!-- Use Case 6: View Dashboard -->
+                <ellipse cx="350" cy="320" rx="90" ry="35" class="use-case"/>
+                <text x="350" y="317" class="use-case-label">UC-03</text>
+                <text x="350" y="333" class="use-case-label">Xem Dashboard</text>
+
+                <!-- Use Case 7: Logout -->
+                <ellipse cx="350" cy="410" rx="80" ry="30" class="use-case"/>
+                <text x="350" y="415" class="use-case-label">Đăng xuất (Logout)</text>
+
+                <!-- Associations -->
+                <!-- Guest to Register -->
+                <line x1="105" y1="150" x2="260" y2="120" class="association"/>
+                <!-- Guest to Login -->
+                <line x1="105" y1="180" x2="260" y2="210" class="association"/>
+
+                <!-- User to Dashboard -->
+                <line x1="105" y1="350" x2="260" y2="320" class="association"/>
+                <!-- User to Logout -->
+                <line x1="105" y1="380" x2="270" y2="405" class="association"/>
+
+                <!-- Extend relationships -->
+                <!-- Register includes Validate Email -->
+                <path d="M 430 105 Q 460 95 450 100" class="extend-line"/>
+                <line x1="430" y1="105" x2="450" y2="100" class="extend-line"/>
+                <text x="445" y="85" class="stereotype">«include»</text>
+
+                <!-- Register includes Hash Password -->
+                <line x1="420" y1="140" x2="455" y2="155" class="extend-line"/>
+                <text x="445" y="140" class="stereotype">«include»</text>
+
+                <!-- Login includes Create Session -->
+                <line x1="425" y1="235" x2="455" y2="245" class="extend-line"/>
+                <text x="450" y="225" class="stereotype">«include»</text>
+
+                <!-- Login to Dashboard -->
+                <line x1="350" y1="255" x2="350" y2="285" class="extend-line"/>
+                <text x="365" y="275" class="stereotype">«success»</text>
+
+                <!-- To Database -->
+                <line x1="590" y1="100" x2="690" y2="220" class="association" stroke-dasharray="5,3"/>
+                <line x1="590" y1="170" x2="690" y2="230" class="association" stroke-dasharray="5,3"/>
+                <line x1="590" y1="250" x2="690" y2="250" class="association" stroke-dasharray="5,3"/>
+            </svg>
+
+            <div class="legend">
+                <h3>Chú thích (Legend)</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 30px;">
+                    <div class="legend-item">
+                        <div class="legend-box" style="background: #74b9ff; border-color: #0984e3;"></div>
+                        <span>Use Case chính (Primary)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-box" style="background: #ffeaa7; border-color: #fdcb6e;"></div>
+                        <span>Use Case phụ (Include)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-box" style="background: #dfe6e9; border-color: #2d3436;"></div>
+                        <span>Use Case mở rộng</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-card">
+                    <h4>UC-01: Đăng ký (Register)</h4>
+                    <ul>
+                        <li>Actor: Guest</li>
+                        <li>Nhập: Email, Password, Họ tên, Đơn vị</li>
+                        <li>Kết quả: Tạo tài khoản mới với role "Author"</li>
+                        <li>Include: Kiểm tra email, Mã hóa password</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>UC-02: Đăng nhập (Login)</h4>
+                    <ul>
+                        <li>Actor: Guest</li>
+                        <li>Nhập: Email, Password</li>
+                        <li>Kết quả: JWT Token + Chuyển đến Dashboard</li>
+                        <li>Include: Tạo JWT Token</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Roles trong hệ thống</h4>
+                    <ul>
+                        <li><strong>Author:</strong> Nộp bài báo</li>
+                        <li><strong>Reviewer:</strong> Phản biện bài báo</li>
+                        <li><strong>Chair:</strong> Quản lý hội nghị</li>
+                        <li><strong>Admin:</strong> Quản trị hệ thống</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Thông tin dự án</h4>
+                    <ul>
+                        <li><strong>Dự án:</strong> UTH-ConfMS</li>
+                        <li><strong>Module:</strong> Authentication</li>
+                        <li><strong>Người vẽ:</strong> Leader (TV1)</li>
+                        <li><strong>Phiên bản:</strong> 1.0</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

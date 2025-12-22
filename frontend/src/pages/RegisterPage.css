@@ -1,0 +1,172 @@
+/**
+ * UTH-ConfMS Frontend
+ * Styles: RegisterPage
+ * Author: Leader (Thành viên 1)
+ */
+
+/* Container chính */
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  padding: 20px;
+}
+
+/* Box chứa form */
+.register-box {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Header với logo */
+.register-header {
+  background: linear-gradient(135deg, #2c3e50 0%, #27ae60 100%);
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+.register-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.register-header p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Form styling */
+.register-form {
+  padding: 30px;
+}
+
+.register-form h2 {
+  margin: 0 0 25px;
+  text-align: center;
+  color: #2c3e50;
+  font-size: 24px;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.required {
+  color: #e74c3c;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #11998e;
+  box-shadow: 0 0 0 3px rgba(17, 153, 142, 0.2);
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+/* Error message */
+.error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #fecaca;
+}
+
+/* Register button */
+.register-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+
+.register-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(17, 153, 142, 0.4);
+}
+
+.register-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.register-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.register-footer {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.register-footer p {
+  color: #666;
+  font-size: 14px;
+}
+
+.register-footer a {
+  color: #11998e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .register-box {
+    margin: 10px;
+  }
+
+  .register-header {
+    padding: 25px 20px;
+  }
+
+  .register-form {
+    padding: 25px 20px;
+  }
+}
