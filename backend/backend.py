@@ -10,7 +10,7 @@ from email.mime.multipart import MIMEMultipart
 
 decision_bp = Blueprint('decision', __name__)
 
-#  DỮ LIỆU MẪU 
+#   DỮ LIỆU MẪU  
 INITIAL_DATA = [
     {"id": "BB01", "title": "Nghiên cứu AI trong chẩn đoán Y tế", "author": "Dương Ngọc Yến Nhi", "score": 8.5, "status": "REVIEWED", "date": "2025-01-10"},
     {"id": "BB02", "title": "Ứng dụng Blockchain trong Logistic", "author": "Trần Minh Quân", "score": 9.5, "status": "REVIEWED", "date": "2025-01-11"},
@@ -21,7 +21,7 @@ INITIAL_DATA = [
 
 mock_papers_db = copy.deepcopy(INITIAL_DATA)
 
-#  CÁC API KHÁC GIỮ NGUYÊN 
+#   CÁC API KHÁC GIỮ NGUYÊN  
 @decision_bp.route('/papers', methods=['GET'])
 def get_papers():
     return jsonify({"success": True, "data": mock_papers_db})
