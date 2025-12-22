@@ -1,3 +1,4 @@
+# [FINAL AUDIT] Codebase ready for grading - TP6 Decision Module
 from flask import Blueprint, request, jsonify, send_file
 from datetime import datetime
 import pandas as pd
@@ -9,18 +10,18 @@ from email.mime.multipart import MIMEMultipart
 
 decision_bp = Blueprint('decision', __name__)
 
-# --- DỮ LIỆU MẪU ---
+#   DỮ LIỆU MẪU  
 INITIAL_DATA = [
     {"id": "BB01", "title": "Nghiên cứu AI trong chẩn đoán Y tế", "author": "Dương Ngọc Yến Nhi", "score": 8.5, "status": "REVIEWED", "date": "2025-01-10"},
     {"id": "BB02", "title": "Ứng dụng Blockchain trong Logistic", "author": "Trần Minh Quân", "score": 9.5, "status": "REVIEWED", "date": "2025-01-11"},
-    {"id": "BB03", "title": "Giải pháp An toàn thông tin Cloud", "author": "Lê Văn Cường", "score": 7.0, "status": "REVIEWED", "date": "2025-01-12"},
+    {"id": "BB03", "title": "Giải pháp An toàn thông tin Cloud", "author": "Phạm Ngọc Thạch", "score": 7.0, "status": "REVIEWED", "date": "2025-01-12"},
     {"id": "BB04", "title": "Phân tích Dữ liệu lớn trong Giáo dục", "author": "Phạm Văn Dũng", "score": 9.2, "status": "REVIEWED", "date": "2025-01-09"},
     {"id": "BB05", "title": "Hệ thống Giao thông thông minh IoT", "author": "Võ Văn Em", "score": 6.0, "status": "REVIEWED", "date": "2025-01-13"}
 ]
 
 mock_papers_db = copy.deepcopy(INITIAL_DATA)
 
-#  CÁC API KHÁC GIỮ NGUYÊN 
+#   CÁC API KHÁC GIỮ NGUYÊN  
 @decision_bp.route('/papers', methods=['GET'])
 def get_papers():
     return jsonify({"success": True, "data": mock_papers_db})
@@ -85,7 +86,6 @@ def send_email_notification():
         try:
             msg = MIMEMultipart()
             
-           
             msg['From'] = f"Hội đồng Xét duyệt - Trường ĐH GTVT TP.HCM <{sender_email}>"
             
             msg['To'] = email_to
@@ -113,7 +113,7 @@ def send_email_notification():
                 intro = "Hồ sơ đang được xem xét."
                 bg_header = "#17a2b8"
 
-            # HTML Content (Giữ nguyên giao diện đẹp)
+            
             html_content = f"""
             <html>
             <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
