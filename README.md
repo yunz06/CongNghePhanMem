@@ -1,6 +1,6 @@
 # 🛡️ UTH-ConfMS: Backend Core System
 
-**Sinh viên:** [Điền Tên Bạn] - [Điền MSSV]
+**Sinh viên:** Lâm Minh Phú - 096206003648
 **Vai trò:** Leader & System Architect
 
 ## ✅ Nhiệm vụ TP1 đã làm
