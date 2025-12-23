@@ -1,6 +1,7 @@
-flask==3.0.0
-flask-cors==4.0.0
-flask-sqlalchemy==3.1.1
-pyjwt==2.8.0
-psycopg2-binary==2.9.9
-python-dotenv==1.0.0
+# UTH-ConfMS Dependencies
+# [TP1] Auth System, Audit Logs, User Management
+
+Flask==3.0.0
+Flask-SQLAlchemy==3.1.1
+Flask-CORS==4.0.0
+Werkzeug==3.0.1
