@@ -1,0 +1,1134 @@
+Date: Thu, 25 Dec 2025 09:43:22 +0000 (UTC)
+Message-ID: <1437892757.73.1766655802811@7f7fbff3a529>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_72_1591674167.1766655802811"
+
+------=_Part_72_1591674167.1766655802811
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>B=C3=81O C=C3=81O T=E1=BB=94NG K=E1=BA=BET =C4=90=E1=BB=92 =C3=
+=81N</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font: var(--ds-font-body-small, Arial, Helvetica, FreeSans, sans-se=
+rif);
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        page-break-after: avoid;
+    }
+
+    pre {
+        font: var(--ds-font-code, Monaco, "Courier New", monospace);
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>B=C3=81O C=C3=81O T=E1=BB=94NG K=E1=BA=BET =C4=90=E1=BB=92 =C3=81N<=
+/h1>
+    <div class=3D"Section1">
+        <div class=3D"confluence-information-macro confluence-information-m=
+acro-information">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-info confluence-informa=
+tion-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<ul local-id=3D"6de76587-3d2b-4639-8094-0a59993b9133">
+<li local-id=3D"696ae458-5c46-4417-9331-8e30e77e4714">
+<p local-id=3D"68e08264-be0a-49ee-a378-7ddd2c406e02"><strong>=C4=90=E1=BB=
+=81 t=C3=A0i:</strong> H=E1=BB=87 th=E1=BB=91ng qu=E1=BA=A3n l=C3=BD h=E1=
+=BB=99i ngh=E1=BB=8B khoa h=E1=BB=8Dc (UTH-ConfMS)</p></li>
+<li local-id=3D"7d570566-f8f3-4285-8c94-d8b08532fd05">
+<p local-id=3D"fdf319ab-5844-4e40-957c-5c37429e62cf"><strong>Gi=E1=BA=A3ng =
+vi=C3=AAn h=C6=B0=E1=BB=9Bng d=E1=BA=ABn:</strong> [Nguy=E1=BB=85n V=C4=83n=
+ Chi=E1=BA=BFn]</p></li>
+</ul>
+<p local-id=3D"9cd56eab-312c-48c9-ab77-7c90821165e0"></p>
+</div>
+</div>
+<div class=3D"table-wrap">
+<table data-table-width=3D"760" data-layout=3D"default" data-local-id=3D"b8=
+149132-0024-4729-804f-798756e20940" class=3D"confluenceTable">
+<tbody>
+<tr ac:local-id=3D"260cd3c0-3831-459b-a2be-0dfa4dc52f9b">
+<th data-local-id=3D"13ba5e0d-8639-45f3-bf51-5bc71f266332" class=3D"conflue=
+nceTh">
+<p local-id=3D"ed443659-6a9e-4627-a1a2-2746be55fc3c">Ch=C6=B0=C6=A1ng (Part=
+)</p></th>
+<th data-local-id=3D"9e33af4f-573d-4d0d-bb5b-d2c799c0217a" class=3D"conflue=
+nceTh">
+<p local-id=3D"518b32e9-3b16-43b5-9288-ae46d6cd6158">N=E1=BB=99i dung ph=E1=
+=BB=A5 tr=C3=A1ch</p></th>
+<th data-local-id=3D"a65d41dd-3e3c-40f0-afe6-aef6bb18b2e4" class=3D"conflue=
+nceTh">
+<p local-id=3D"2d3cdf0b-8455-4b4f-b7e1-14396b856516">Th=C3=A0nh vi=C3=AAn t=
+h=E1=BB=B1c hi=E1=BB=87n</p></th>
+<th data-local-id=3D"b97389ac-94c4-4e50-a7bc-0a6bdd3d3109" class=3D"conflue=
+nceTh">
+<p local-id=3D"c9454b47-b1db-4dc4-a66a-e602f1870827">Ghi ch=C3=BA</p></th>
+</tr>
+<tr ac:local-id=3D"47512a1e-460b-44c6-8a32-e0e8e699cb1b">
+<td data-local-id=3D"39daf32e-af95-47dc-b363-21156684b4ce" class=3D"conflue=
+nceTd">
+<p local-id=3D"bd77bd5d-f41c-41f4-a56d-ee760dacd1ea">I</p></td>
+<td data-local-id=3D"046128d6-1357-4fd1-b356-b244a18733fb" class=3D"conflue=
+nceTd">
+<p local-id=3D"b295e65f-e97b-43c2-9417-5769726227c7">Project Introduction</=
+p></td>
+<td data-local-id=3D"a5f3fb6f-a561-4049-8bfe-83288bd87ae6" class=3D"conflue=
+nceTd">
+<p local-id=3D"902fa300-34b7-4e11-a9e6-45b898254c22">L=C3=A2m Minh Ph=C3=BA=
+ (Leader)</p></td>
+<td data-local-id=3D"67f157eb-007e-4300-84bf-7b1f519533e8" class=3D"conflue=
+nceTd">
+<p local-id=3D"6fcc68cb-a947-48dd-8af5-ddb1ba3b23aa">T=E1=BB=95ng quan, M=
+=E1=BB=A5c ti=C3=AAu, Ph=E1=BA=A1m vi</p></td>
+</tr>
+<tr ac:local-id=3D"12bb32a3-bebd-4698-8112-9e788a7d5f43">
+<td data-local-id=3D"064b5ee8-497d-4f03-8ae0-b2c7d4109e62" class=3D"conflue=
+nceTd">
+<p local-id=3D"4a52faed-bb43-4675-a095-4eee5b67e013">II</p></td>
+<td data-local-id=3D"f0e63582-5b86-4780-8487-7373542a6d64" class=3D"conflue=
+nceTd">
+<p local-id=3D"a2176f82-7dab-4438-a939-132c24d78034">Project Management</p>=
+</td>
+<td data-local-id=3D"fb1b377c-590c-42d9-b51b-e04e91c36b67" class=3D"conflue=
+nceTd">
+<p local-id=3D"2283765a-a284-4f71-90fa-e51f6e093f3a">Nguy=E1=BB=85n V=C4=83=
+n Hi=E1=BA=BFu</p></td>
+<td data-local-id=3D"4bb4924e-ed87-4852-96b9-2bb24349e73d" class=3D"conflue=
+nceTd">
+<p local-id=3D"c7f12ac6-08fb-4d35-a296-f89018480a7c">K=E1=BA=BF ho=E1=BA=A1=
+ch, Sprint, C=C3=B4ng c=E1=BB=A5</p></td>
+</tr>
+<tr ac:local-id=3D"dfb9699c-6fb6-417e-af0c-9514df211177">
+<td data-local-id=3D"87d59687-8511-4145-b416-f6de971e4d8d" class=3D"conflue=
+nceTd">
+<p local-id=3D"68a6d6df-aa8c-4c74-8681-6d803d6d0d6b">III</p></td>
+<td data-local-id=3D"973f31b1-51e4-4170-902d-261100c20bb4" class=3D"conflue=
+nceTd">
+<p local-id=3D"0b6f592f-9c98-4815-abb5-9f4c2b2ee2e1">Software Requirements<=
+/p></td>
+<td data-local-id=3D"51e31ce5-6268-474f-9ec4-8c503d5d9bcb" class=3D"conflue=
+nceTd">
+<p local-id=3D"89e4cff3-818c-4f11-bab4-c4e050a1b88f">L=C3=AA V=C4=83n =C4=
+=90=E1=BA=A1t</p></td>
+<td data-local-id=3D"6ab25498-abd7-4db7-a5d0-b723dd43d298" class=3D"conflue=
+nceTd">
+<p local-id=3D"118a326b-8188-4ab3-9524-209e559a1447">Use Case, Ch=E1=BB=A9c=
+ n=C4=83ng (SRS)</p></td>
+</tr>
+<tr ac:local-id=3D"739d2d34-72a4-4087-9bd7-8fb698c490ad">
+<td data-local-id=3D"87ca191a-f400-4eb6-836c-623f4f55480b" class=3D"conflue=
+nceTd">
+<p local-id=3D"6b044d07-419a-48a3-af46-f0082a06fb2b">IV</p></td>
+<td data-local-id=3D"1de3c539-f54d-4160-9790-259ceff60f45" class=3D"conflue=
+nceTd">
+<p local-id=3D"c86cf5d6-33cb-4f12-9c20-3470096c6665">System Design (Ph=E1=
+=BA=A7n 1)</p></td>
+<td data-local-id=3D"83872887-976d-4b08-a2e8-b1a8fdf523b3" class=3D"conflue=
+nceTd">
+<p local-id=3D"b3e05534-f443-4e2f-8221-f053d500f238">Nguy=E1=BB=85n Ti=E1=
+=BA=BFn Ph=C3=A1t =C4=90=E1=BA=A1t</p></td>
+<td data-local-id=3D"9dab3a8d-f591-4e20-a81c-2edb40925986" class=3D"conflue=
+nceTd">
+<p local-id=3D"e855495c-ee29-42bc-844c-910d5cd570fe">Database (ERD), Ki=E1=
+=BA=BFn tr=C3=BAc</p></td>
+</tr>
+<tr ac:local-id=3D"b28c80c1-b6c8-4a9c-80bc-4b2667d00e0d">
+<td data-local-id=3D"d936d916-12e7-4dde-9886-ec956251ec2b" class=3D"conflue=
+nceTd">
+<p local-id=3D"e63ddc5d-4f80-4c4d-9202-304f0115124d">IV</p></td>
+<td data-local-id=3D"796fa2c9-e0d1-497f-8a54-9e219e8fa5d0" class=3D"conflue=
+nceTd">
+<p local-id=3D"fc1e040f-1553-451c-abd3-d45f053615ae">System Design (Ph=E1=
+=BA=A7n 2)</p></td>
+<td data-local-id=3D"8a1f8f0b-be74-4a73-92fd-352d08d65620" class=3D"conflue=
+nceTd">
+<p local-id=3D"d562235d-0f62-4c68-acab-92bfbe8fcb54">=C4=90=E1=BB=97 V=C5=
+=A9 Khang</p></td>
+<td data-local-id=3D"7eab130a-3cc9-4285-af13-2b31b442b679" class=3D"conflue=
+nceTd">
+<p local-id=3D"f8d30869-7c88-47ef-bcb2-1ea9153b8584">Class Diagram, Sequenc=
+e, API</p></td>
+</tr>
+<tr ac:local-id=3D"9d3beecc-c896-450f-8731-1bf0c57f95cf">
+<td data-local-id=3D"6554b3ad-8b01-476d-82ad-7ad4075b4102" class=3D"conflue=
+nceTd">
+<p local-id=3D"d8fd1d8b-8f63-42f3-80c9-07568c472512">V</p></td>
+<td data-local-id=3D"3d13e349-8707-40a1-9066-f8918ed93929" class=3D"conflue=
+nceTd">
+<p local-id=3D"662815f9-ab4f-48eb-906e-26fb8e3741e1">Software Testing</p></=
+td>
+<td data-local-id=3D"ef5805d3-4a01-4138-8ccd-5c76da94c018" class=3D"conflue=
+nceTd">
+<p local-id=3D"290acd7f-9af2-4bb2-9b20-b45d04a5b1db">Tr=E1=BA=A7n Minh Qu=
+=C3=A2n</p></td>
+<td data-local-id=3D"e24ecde0-a87c-4c43-8b52-8982077d53a1" class=3D"conflue=
+nceTd">
+<p local-id=3D"981beb5b-e955-4e4a-91a5-7438434931ba">Test Plan, Test Case</=
+p></td>
+</tr>
+<tr ac:local-id=3D"f8cc07bc-0a3c-49f7-a8e1-86b9313562a2">
+<td data-local-id=3D"7c7c20d8-b40d-448c-bf56-f61a0a907722" class=3D"conflue=
+nceTd">
+<p local-id=3D"998bac9b-fbcf-4c83-b936-ebba495e6555">VI</p></td>
+<td data-local-id=3D"bc9504c5-4f57-45c1-b575-3ce9bd5ef9c8" class=3D"conflue=
+nceTd">
+<p local-id=3D"6b6720b4-1feb-476e-9b4b-74ea3cf3b8a8">Release &amp; User Gui=
+de</p></td>
+<td data-local-id=3D"4123029f-6f53-4a7f-9363-ae130cd7586f" class=3D"conflue=
+nceTd">
+<p local-id=3D"e570f1a9-8f37-4be9-ab3b-43292381dd79">Ng=C3=B4 Ph=C3=BA Minh=
+ H=C3=B9ng</p></td>
+<td data-local-id=3D"31dba501-689d-4120-bb04-7f2db7a493b9" class=3D"conflue=
+nceTd">
+<p local-id=3D"8a141341-ee85-458e-9247-8c9ee1b5d86f">H=C6=B0=E1=BB=9Bng d=
+=E1=BA=ABn s=E1=BB=AD d=E1=BB=A5ng, =C4=90=C3=B3ng g=C3=B3i</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p local-id=3D"b18ca4e8-0224-42ae-96fb-a1c4aa1e619b"></p>
+<style type=3D"text/css">/*<![CDATA[*/
+div.rbtoc1766655802730 {padding: 0px;}
+div.rbtoc1766655802730 ul {list-style: none;margin-left: 0px;}
+div.rbtoc1766655802730 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style>
+<div class=3D"toc-macro rbtoc1766655802730">
+<ul class=3D"toc-indentation">
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-I.PROJECTINTRODUCTION(GI=E1=BB=9AITHI=E1=BB=86UD=E1=BB=B0=C3=81N)">I. =
+PROJECT INTRODUCTION (GI=E1=BB=9AI THI=E1=BB=86U D=E1=BB=B0 =C3=81N)</a>
+<ul class=3D"toc-indentation">
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-1.Overview(T=E1=BB=95ngquan)">1. Overview (T=E1=BB=95ng quan)</a></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-2.ProductBackground(B=E1=BB=91ic=E1=BA=A3nh=C4=91=E1=BB=81t=C3=A0i)">2=
+. Product Background (B=E1=BB=91i c=E1=BA=A3nh =C4=91=E1=BB=81 t=C3=A0i)</a=
+></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-3.BusinessOpportunity&amp;Vision(M=E1=BB=A5cti=C3=AAu&amp;T=E1=BA=A7mn=
+h=C3=ACn)">3. Business Opportunity &amp; Vision (M=E1=BB=A5c ti=C3=AAu &amp=
+; T=E1=BA=A7m nh=C3=ACn)</a></li>
+</ul></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-II.PROJECTMANAGEMENTPLAN(K=E1=BA=BEHO=E1=BA=A0CHQU=E1=BA=A2NL=C3=9D)">=
+II. PROJECT MANAGEMENT PLAN (K=E1=BA=BE HO=E1=BA=A0CH QU=E1=BA=A2N L=C3=9D)=
+</a>
+<ul class=3D"toc-indentation">
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-1.ProjectOrganization(T=E1=BB=95ch=E1=BB=A9cd=E1=BB=B1=C3=A1n)">1. Pro=
+ject Organization (T=E1=BB=95 ch=E1=BB=A9c d=E1=BB=B1 =C3=A1n)</a></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-2.ManagementApproach(Ph=C6=B0=C6=A1ngph=C3=A1pqu=E1=BA=A3nl=C3=BD)">2.=
+ Management Approach (Ph=C6=B0=C6=A1ng ph=C3=A1p qu=E1=BA=A3n l=C3=BD)</a><=
+/li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-3.ProjectSchedule(K=E1=BA=BFho=E1=BA=A1chtri=E1=BB=83nkhai)">3. Projec=
+t Schedule (K=E1=BA=BF ho=E1=BA=A1ch tri=E1=BB=83n khai)</a></li>
+</ul></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-III.SOFTWAREREQUIREMENTSPECIFICATION(=C4=90=E1=BA=B6CT=E1=BA=A2Y=C3=8A=
+UC=E1=BA=A6U)">III. SOFTWARE REQUIREMENT SPECIFICATION (=C4=90=E1=BA=B6C T=
+=E1=BA=A2 Y=C3=8AU C=E1=BA=A6U)</a>
+<ul class=3D"toc-indentation">
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-1.Actors(Danhs=C3=A1cht=C3=A1cnh=C3=A2n)">1. Actors (Danh s=C3=A1ch t=
+=C3=A1c nh=C3=A2n)</a></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-2.UseCaseDiagram(Bi=E1=BB=83u=C4=91=E1=BB=93UseCase)">2. Use Case Diag=
+ram (Bi=E1=BB=83u =C4=91=E1=BB=93 Use Case)</a></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-3.FunctionalRequirements(Chiti=E1=BA=BFtch=E1=BB=A9cn=C4=83ng)">3. Fun=
+ctional Requirements (Chi ti=E1=BA=BFt ch=E1=BB=A9c n=C4=83ng)</a></li>
+</ul></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-IV.SOFTWAREDESIGNDESCRIPTION(THI=E1=BA=BETK=E1=BA=BEH=E1=BB=86TH=E1=BB=
+=90NG)">IV. SOFTWARE DESIGN DESCRIPTION (THI=E1=BA=BET K=E1=BA=BE H=E1=BB=
+=86 TH=E1=BB=90NG)</a>
+<ul class=3D"toc-indentation">
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-1.SystemArchitecture&amp;Database(Ki=E1=BA=BFntr=C3=BAc&amp;CSDL)">1. =
+System Architecture &amp; Database (Ki=E1=BA=BFn tr=C3=BAc &amp; CSDL)</a>
+<ul class=3D"toc-indentation">
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-1.1.Ki=E1=BA=BFntr=C3=BAch=E1=BB=87th=E1=BB=91ng">1.1. Ki=E1=BA=BFn tr=
+=C3=BAc h=E1=BB=87 th=E1=BB=91ng</a></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-1.2.DatabaseDesign(Thi=E1=BA=BFtk=E1=BA=BFCSDL)">1.2. Database Design =
+(Thi=E1=BA=BFt k=E1=BA=BF CSDL)</a></li>
+</ul></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-2.DetailedDesign(Thi=E1=BA=BFtk=E1=BA=BFchiti=E1=BA=BFt)">2. Detailed =
+Design (Thi=E1=BA=BFt k=E1=BA=BF chi ti=E1=BA=BFt)</a>
+<ul class=3D"toc-indentation">
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-2.1.ClassDiagram(Bi=E1=BB=83u=C4=91=E1=BB=93l=E1=BB=9Bp)">2.1. Class D=
+iagram (Bi=E1=BB=83u =C4=91=E1=BB=93 l=E1=BB=9Bp)</a></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-2.2.SequenceDiagram(Bi=E1=BB=83u=C4=91=E1=BB=93tu=E1=BA=A7nt=E1=BB=B1)=
+">2.2. Sequence Diagram (Bi=E1=BB=83u =C4=91=E1=BB=93 tu=E1=BA=A7n t=E1=BB=
+=B1)</a></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-2.3.APISpecification(Thi=E1=BA=BFtk=E1=BA=BFAPI)">2.3. API Specificati=
+on (Thi=E1=BA=BFt k=E1=BA=BF API)</a></li>
+</ul></li>
+</ul></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-V.SOFTWARETESTINGDOCUMENTATION(KI=E1=BB=82MTH=E1=BB=AC)">V. SOFTWARE T=
+ESTING DOCUMENTATION (KI=E1=BB=82M TH=E1=BB=AC)</a>
+<ul class=3D"toc-indentation">
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-1.TestStrategy(Chi=E1=BA=BFnl=C6=B0=E1=BB=A3cki=E1=BB=83mth=E1=BB=AD)"=
+>1. Test Strategy (Chi=E1=BA=BFn l=C6=B0=E1=BB=A3c ki=E1=BB=83m th=E1=BB=AD=
+)</a></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-2.TestPlan(K=E1=BA=BFho=E1=BA=A1chTest)">2. Test Plan (K=E1=BA=BF ho=
+=E1=BA=A1ch Test)</a></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-3.TestReports(B=C3=A1oc=C3=A1ok=E1=BA=BFtqu=E1=BA=A3)">3. Test Reports=
+ (B=C3=A1o c=C3=A1o k=E1=BA=BFt qu=E1=BA=A3)</a></li>
+</ul></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-VI.RELEASEPACKAGE&amp;USERGUIDES(H=C6=AF=E1=BB=9ANGD=E1=BA=AANS=E1=BB=
+=ACD=E1=BB=A4NG)">VI. RELEASE PACKAGE &amp; USER GUIDES (H=C6=AF=E1=BB=9ANG=
+ D=E1=BA=AAN S=E1=BB=AC D=E1=BB=A4NG)</a>
+<ul class=3D"toc-indentation">
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-1.InstallationGuides(H=C6=B0=E1=BB=9Bngd=E1=BA=ABnc=C3=A0i=C4=91=E1=BA=
+=B7t)">1. Installation Guides (H=C6=B0=E1=BB=9Bng d=E1=BA=ABn c=C3=A0i =C4=
+=91=E1=BA=B7t)</a></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-2.UserManual(H=C6=B0=E1=BB=9Bngd=E1=BA=ABns=E1=BB=ADd=E1=BB=A5ng)">2. =
+User Manual (H=C6=B0=E1=BB=9Bng d=E1=BA=ABn s=E1=BB=AD d=E1=BB=A5ng)</a>
+<ul class=3D"toc-indentation">
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-2.1.D=C3=A0nhchoAdmin&amp;Manager">2.1. D=C3=A0nh cho Admin &amp; Mana=
+ger</a></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-2.2.D=C3=A0nhchoT=C3=A1cgi=E1=BA=A3(Author)">2.2. D=C3=A0nh cho T=C3=
+=A1c gi=E1=BA=A3 (Author)</a></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-2.3.D=C3=A0nhchoReviewer&amp;Chair">2.3. D=C3=A0nh cho Reviewer &amp; =
+Chair</a></li>
+<li><a href=3D"#B=C3=81OC=C3=81OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=
+=81N-2.4.Ch=E1=BB=A9cn=C4=83ngB=C3=A1oc=C3=A1o(TP7)">2.4. Ch=E1=BB=A9c n=C4=
+=83ng B=C3=A1o c=C3=A1o (TP7)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<h1 local-id=3D"2ee84360-ee63-4fbc-a9b3-a2581ba3ca2c" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-I.PROJECTINTRODUCTION(GI=E1=
+=BB=9AITHI=E1=BB=86UD=E1=BB=B0=C3=81N)">I. PROJECT INTRODUCTION (GI=E1=BB=
+=9AI THI=E1=BB=86U D=E1=BB=B0 =C3=81N)</h1>
+<p local-id=3D"867c930e-e9b0-499e-a2e3-1a57a267c27b"><em>(Ng=C6=B0=E1=BB=9D=
+i th=E1=BB=B1c hi=E1=BB=87n: @L=C3=A2m Minh Ph=C3=BA - Leader)</em> <em>(Th=
+am kh=E1=BA=A3o c=E1=BA=A5u tr=C3=BAc: Trang 6-8 file PDF)</em></p>
+<p local-id=3D"74344f3e-d00c-4cdf-b4ca-bf55d3f8c8ea">"...T=E1=BB=95ng quan =
+d=E1=BB=B1 =C3=A1n, <strong>T=C3=ADch h=E1=BB=A3p h=E1=BB=87 th=E1=BB=91ng =
+(System Integration)</strong> &amp; Deploy l=C3=AAn Server."</p>
+<h2 local-id=3D"b178c827-8fe5-4cad-8982-7019ae03b167" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-1.Overview(T=E1=BB=95ngquan)=
+">1. Overview (T=E1=BB=95ng quan)</h2>
+<ul local-id=3D"1e9b847b-e6ea-43c7-9ea0-8bbaa9e2a271">
+<li local-id=3D"38156db3-df00-4cbf-a4a4-463bd6ca6169">
+<p local-id=3D"7adbcaa5-5eef-416e-a682-2c250159aaca"><strong>T=C3=AAn d=E1=
+=BB=B1 =C3=A1n:</strong> H=E1=BB=87 th=E1=BB=91ng qu=E1=BA=A3n l=C3=BD h=E1=
+=BB=99i ngh=E1=BB=8B khoa h=E1=BB=8Dc (UTH Scientific Conference Paper Mana=
+gement System).</p></li>
+<li local-id=3D"a8d0c34c-b2fe-4ec4-986e-7d1b268c033c">
+<p local-id=3D"de1d338c-5ebd-4ef7-b15e-3f984470d7b5"><strong>Vi=E1=BA=BFt t=
+=E1=BA=AFt:</strong> UTH-ConfMS.</p></li>
+<li local-id=3D"156d21fe-e7ff-418c-b6fb-6fdaac9500c0">
+<p local-id=3D"2cadff0b-1fdb-43c0-b729-70457b2feacf"><strong>M=C3=B4 t=E1=
+=BA=A3 ng=E1=BA=AFn:</strong> H=E1=BB=87 th=E1=BB=91ng web h=E1=BB=97 tr=E1=
+=BB=A3 to=C3=A0n b=E1=BB=99 quy tr=C3=ACnh t=E1=BB=95 ch=E1=BB=A9c h=E1=BB=
+=99i ngh=E1=BB=8B t=E1=BB=AB l=C3=BAc n=E1=BB=99p b=C3=A0i, ph=E1=BA=A3n bi=
+=E1=BB=87n =C4=91=E1=BA=BFn xu=E1=BA=A5t b=E1=BA=A3n k=E1=BB=B7 y=E1=BA=BFu=
+.</p></li>
+</ul>
+<h2 local-id=3D"bf84f41f-6743-4c66-8850-425b6616e473" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-2.ProductBackground(B=E1=BB=
+=91ic=E1=BA=A3nh=C4=91=E1=BB=81t=C3=A0i)">2. Product Background (B=E1=BB=91=
+i c=E1=BA=A3nh =C4=91=E1=BB=81 t=C3=A0i)</h2>
+<ul local-id=3D"f71d1015-4d5b-4d02-83be-536f34bd3dcc">
+<li local-id=3D"8863d0cf-c595-4684-886a-80d488bb028b">
+<p local-id=3D"33b63cb2-ba9a-44ea-a9b6-0b54f8ecb83c"><strong>Hi=E1=BB=87n t=
+r=E1=BA=A1ng:</strong> Hi=E1=BB=87n nay, c=C3=A1c khoa t=E1=BA=A1i tr=C6=B0=
+=E1=BB=9Dng =C4=90H GTVT (UTH) th=C6=B0=E1=BB=9Dng t=E1=BB=95 ch=E1=BB=A9c =
+c=C3=A1c h=E1=BB=99i ngh=E1=BB=8B khoa h=E1=BB=8Dc m=E1=BB=99t c=C3=A1ch r=
+=E1=BB=9Di r=E1=BA=A1c. Vi=E1=BB=87c n=E1=BB=99p b=C3=A0i, ch=E1=BA=A5m =C4=
+=91i=E1=BB=83m v=C3=A0 ph=E1=BA=A3n bi=E1=BB=87n ch=E1=BB=A7 y=E1=BA=BFu th=
+=E1=BB=B1c hi=E1=BB=87n th=E1=BB=A7 c=C3=B4ng qua Email ho=E1=BA=B7c Google=
+ Form.</p></li>
+<li local-id=3D"8ed4864e-54a5-4812-828f-dd447bcf46af">
+<p local-id=3D"d4680c35-c87a-4f49-855e-b39b7b754fd9"><strong>V=E1=BA=A5n =
+=C4=91=E1=BB=81:</strong> =C4=90i=E1=BB=81u n=C3=A0y d=E1=BA=ABn =C4=91=E1=
+=BA=BFn d=E1=BB=AF li=E1=BB=87u kh=C3=B4ng =C4=91=E1=BB=93ng b=E1=BB=99, kh=
+=C3=B3 ki=E1=BB=83m so=C3=A1t ti=E1=BA=BFn =C4=91=E1=BB=99, d=E1=BB=85 th=
+=E1=BA=A5t l=E1=BA=A1c b=C3=A0i b=C3=A1o v=C3=A0 t=E1=BB=91n nhi=E1=BB=81u =
+th=E1=BB=9Di gian t=E1=BB=95ng h=E1=BB=A3p k=E1=BB=B7 y=E1=BA=BFu.</p></li>
+<li local-id=3D"73804cd0-5883-429c-9370-5de13c060fbd">
+<p local-id=3D"bab021db-67d3-4924-b1b5-a2ce7b42363c"><strong>Nhu c=E1=BA=A7=
+u:</strong> C=E1=BA=A7n m=E1=BB=99t h=E1=BB=87 th=E1=BB=91ng t=E1=BA=ADp tr=
+ung (Centralized System) =C4=91=E1=BB=83 qu=E1=BA=A3n l=C3=BD to=C3=A0n b=
+=E1=BB=99 quy tr=C3=ACnh kh=C3=A9p k=C3=ADn t=E1=BB=AB l=C3=BAc n=E1=BB=99p=
+ b=C3=A0i =C4=91=E1=BA=BFn khi xu=E1=BA=A5t b=E1=BA=A3n.</p></li>
+</ul>
+<h2 local-id=3D"a7b23008-14b1-4399-9175-7eabecc0f795" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-3.BusinessOpportunity&amp;Vi=
+sion(M=E1=BB=A5cti=C3=AAu&amp;T=E1=BA=A7mnh=C3=ACn)">3. Business Opportunit=
+y &amp; Vision (M=E1=BB=A5c ti=C3=AAu &amp; T=E1=BA=A7m nh=C3=ACn)</h2>
+<ul local-id=3D"6ddf6995-da64-4f8f-8677-93de65263ad4">
+<li local-id=3D"1cbb2e5e-4a2d-4e48-8649-6d2c6cb3b8f6">
+<p local-id=3D"51920720-aad9-44fd-9610-9c33c3671e9d"><strong>M=E1=BB=A5c ti=
+=C3=AAu ch=C3=ADnh:</strong> X=C3=A2y d=E1=BB=B1ng h=E1=BB=87 th=E1=BB=91ng=
+ <strong>UTH-ConfMS</strong> gi=C3=BAp qu=E1=BA=A3n l=C3=BD quy tr=C3=ACnh =
+kh=C3=A9p k=C3=ADn (End-to-end flow) t=C6=B0=C6=A1ng t=E1=BB=B1 nh=C6=B0 Ea=
+syChair nh=C6=B0ng =C4=91=C6=B0=E1=BB=A3c t=C3=B9y bi=E1=BA=BFn cho UTH.</p=
+></li>
+<li local-id=3D"042ad601-e56b-4f72-8466-6d57d2a5aab9">
+<p local-id=3D"6cab10d0-47da-4681-9161-a723cef99717"><strong>Gi=E1=BA=A3i p=
+h=C3=A1p c=E1=BB=A5 th=E1=BB=83:</strong></p>
+<ul local-id=3D"f376cc73-bad6-45fc-9bc9-762974bebeb8">
+<li local-id=3D"fa2d8414-23ac-49fc-88c5-09ba7db284b9">
+<p local-id=3D"6a171703-64eb-4ce2-8b1c-de34bcbfde2d"><strong>T=E1=BB=B1 =C4=
+=91=E1=BB=99ng h=C3=B3a:</strong> T=E1=BB=B1 =C4=91=E1=BB=99ng ki=E1=BB=83m=
+ tra h=E1=BA=A1n n=E1=BB=99p (Deadline), g=E1=BB=A3i =C3=BD ph=C3=A2n c=C3=
+=B4ng ph=E1=BA=A3n bi=E1=BB=87n (Auto-Assign).</p></li>
+<li local-id=3D"d71d89b6-1a1a-4730-8b41-0888415f78a2">
+<p local-id=3D"fa6c7358-f605-484d-9510-ba077b08b09b"><strong>Minh b=E1=BA=
+=A1ch:</strong> T=C3=A1c gi=E1=BA=A3 theo d=C3=B5i =C4=91=C6=B0=E1=BB=A3c t=
+r=E1=BA=A1ng th=C3=A1i b=C3=A0i vi=E1=BA=BFt (Pending/Accepted/Rejected).</=
+p></li>
+<li local-id=3D"687498b1-a427-4b14-aedb-86486be44a0c">
+<p local-id=3D"1ed27bef-0f49-4d27-9d69-4e1dbc8c82c4"><strong>Hi=E1=BB=87u q=
+u=E1=BA=A3:</strong> H=E1=BB=97 tr=E1=BB=A3 xu=E1=BA=A5t b=E1=BA=A3n K=E1=
+=BB=B7 y=E1=BA=BFu v=C3=A0 B=C3=A1o c=C3=A1o th=E1=BB=91ng k=C3=AA ch=E1=BB=
+=89 v=E1=BB=9Bi 1 c=C3=BA click chu=E1=BB=99t (T=C3=ADnh n=C4=83ng Export E=
+xcel).</p></li>
+</ul></li>
+</ul>
+<hr local-id=3D"56b14780-9eb4-4ceb-850f-aa888dd4ee28">
+<h1 local-id=3D"e1dee067-23e1-4064-9aa0-7323b2ba250b" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-II.PROJECTMANAGEMENTPLAN(K=
+=E1=BA=BEHO=E1=BA=A0CHQU=E1=BA=A2NL=C3=9D)">II. PROJECT MANAGEMENT PLAN (K=
+=E1=BA=BE HO=E1=BA=A0CH QU=E1=BA=A2N L=C3=9D)</h1>
+<p local-id=3D"aa0c98c3-8156-462b-8b96-b152d935862a"><em>(Ng=C6=B0=E1=BB=9D=
+i th=E1=BB=B1c hi=E1=BB=87n: @Nguy=E1=BB=85n V=C4=83n Hi=E1=BA=BFu)</em> <e=
+m>(Tham kh=E1=BA=A3o c=E1=BA=A5u tr=C3=BAc: Trang 9-18 file PDF)</em></p>
+<h2 local-id=3D"0c776b29-ccfc-4804-a5a0-dad37f8aa68f" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-1.ProjectOrganization(T=E1=
+=BB=95ch=E1=BB=A9cd=E1=BB=B1=C3=A1n)">1. Project Organization (T=E1=BB=95 c=
+h=E1=BB=A9c d=E1=BB=B1 =C3=A1n)</h2>
+<ul local-id=3D"d3acc843-8bc2-49da-b568-3a893d083923">
+<li local-id=3D"586805db-8619-4a31-a8bb-c97c288e6571">
+<p local-id=3D"0e0b3eef-3265-4f48-b929-ed000515b1a5"><strong>Danh s=C3=A1ch=
+ th=C3=A0nh vi=C3=AAn &amp; Vai tr=C3=B2:</strong> (K=E1=BA=BB b=E1=BA=A3ng=
+ 7 ng=C6=B0=E1=BB=9Di P1-P7 k=C3=A8m nhi=E1=BB=87m v=E1=BB=A5 nh=C6=B0 file=
+ demo.docx).</p></li>
+<li local-id=3D"849a08c0-3a71-49fc-87bd-69f0f64e5bed">
+<p local-id=3D"66dc5717-7531-4ebd-af15-d88de0b2c87a"><strong>C=C3=B4ng c=E1=
+=BB=A5 s=E1=BB=AD d=E1=BB=A5ng:</strong> Jira (Qu=E1=BA=A3n l=C3=BD task), =
+GitHub (Code), Google Drive (T=C3=A0i li=E1=BB=87u).</p></li>
+</ul>
+<h2 local-id=3D"d92e6ac7-3f03-4133-9449-41fffb8dcb17" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-2.ManagementApproach(Ph=C6=
+=B0=C6=A1ngph=C3=A1pqu=E1=BA=A3nl=C3=BD)">2. Management Approach (Ph=C6=B0=
+=C6=A1ng ph=C3=A1p qu=E1=BA=A3n l=C3=BD)</h2>
+<ul local-id=3D"6ddf36b4-a80f-4ccc-9d5a-5d4f5cbfde63">
+<li local-id=3D"3cf3c88f-07f1-40fa-b9ca-0a9855234eb7">
+<p local-id=3D"df3081eb-c8b2-4381-acf1-30868b1533f1">=C3=81p d=E1=BB=A5ng m=
+=C3=B4 h=C3=ACnh <strong>Agile/Scrum</strong>.</p></li>
+<li local-id=3D"7cd09757-0a60-4d6f-b336-491c92dc387b">
+<p local-id=3D"689f4b0b-0802-41e2-bf5d-c85ff0e72e4b">Chia d=E1=BB=B1 =C3=A1=
+n th=C3=A0nh c=C3=A1c Sprint (TP1 -&gt; TP9).</p></li>
+</ul>
+<h2 local-id=3D"5e00f943-ef45-454c-afa2-e8ab4b59a584" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-3.ProjectSchedule(K=E1=BA=BF=
+ho=E1=BA=A1chtri=E1=BB=83nkhai)">3. Project Schedule (K=E1=BA=BF ho=E1=BA=
+=A1ch tri=E1=BB=83n khai)</h2>
+<p local-id=3D"50041288-47b0-4519-9606-bc213e510f1d"><em>(V=E1=BA=BD l=E1=
+=BA=A1i timeline c=C3=A1c TP d=E1=BB=B1a tr=C3=AAn file demo.docx)</em></p>
+<ul local-id=3D"5ce35b08-0a52-4c6b-8ef7-a50336198dea">
+<li local-id=3D"e7c5858f-f33c-4943-95be-82c7e459ae6e">
+<p local-id=3D"7b68f944-ab67-47a3-abc5-0d93e8196d30"><strong>TP1:</strong> =
+Admin &amp; Auth System.</p></li>
+<li local-id=3D"3ebc66dd-e392-4b01-b2e7-bfde8fb9c17f">
+<p local-id=3D"b5797432-0d0c-4dbb-94d4-fdc5dd6b910e"><strong>TP2:</strong> =
+Conference &amp; CFP Setup.</p></li>
+<li local-id=3D"cb1c55d9-5ee9-4213-8ab3-0f97a732046b">
+<p local-id=3D"4a88450a-081e-42dc-90f2-960c095ab7b5"><strong>TP3:</strong> =
+Submission System.</p></li>
+<li local-id=3D"286a87b3-952f-40dd-810e-0cce993d6de8">
+<p local-id=3D"f57868e0-bd7c-49ff-8c9b-93cfccbd6638">...</p></li>
+<li local-id=3D"be9ee7ec-2d46-42b1-b86c-33647c0feb4b">
+<p local-id=3D"4a8d4b1e-4daf-46d3-b889-3ae79d12d1ab"><strong>TP9:</strong> =
+Final Report &amp; Documentation.</p></li>
+</ul>
+<div class=3D"table-wrap">
+<table data-table-width=3D"760" data-layout=3D"default" data-local-id=3D"c1=
+f9f0fa-65ed-4e9b-a821-545f51bdb714" class=3D"confluenceTable">
+<colgroup>
+<col style=3D"width: 253.0px;">
+<col style=3D"width: 302.0px;">
+<col style=3D"width: 204.0px;">
+</colgroup>
+<tbody>
+<tr ac:local-id=3D"0a4fb784-2409-4fe0-93b5-9d687e2854e1">
+<th data-local-id=3D"311b3fd1-b40b-4a6c-b7f9-791739f4b210" class=3D"conflue=
+nceTh">
+<p local-id=3D"5ca84a58-f090-4eda-9a00-fd519f8f9ae1">Ch=C6=B0=C6=A1ng (Part=
+)</p></th>
+<th data-local-id=3D"f924f560-f60e-41cb-94b5-70c311dd9255" class=3D"conflue=
+nceTh">
+<p local-id=3D"8a9a395e-5b08-4883-8ff2-ab7d5e74449a">N=E1=BB=99i dung th=E1=
+=BB=B1c hi=E1=BB=87n (Deliverables)</p></th>
+<th data-local-id=3D"b1741549-11a5-4c1f-bd88-dd11e1a577e6" class=3D"conflue=
+nceTh">
+<p local-id=3D"f87c179e-58c3-4c5c-80b2-09797af14c35">Ng=C6=B0=E1=BB=9Di ph=
+=E1=BB=A5 tr=C3=A1ch ch=C3=ADnh</p></th>
+</tr>
+<tr ac:local-id=3D"659b8ef0-2aa5-4905-a2a6-99065a4a26a0">
+<td data-local-id=3D"528e6a32-de23-455d-8a66-78079589b1a5" class=3D"conflue=
+nceTd">
+<p local-id=3D"f6676db1-57a5-427e-af00-0f028bbd6132">Sprint 1</p></td>
+<td data-local-id=3D"85027e15-15a5-4aa5-91e8-fede5d3cb39a" class=3D"conflue=
+nceTd">
+<p local-id=3D"e95c4727-c7b8-4ad3-a866-18b69b5bf86b">TP1 - System &amp; Adm=
+in: X=C3=A2y d=E1=BB=B1ng Database, =C4=90=C4=83ng nh=E1=BA=ADp, Ph=C3=A2n =
+quy=E1=BB=81n, Audit Log</p></td>
+<td data-local-id=3D"0f35f64e-1643-46c8-9902-f3e5be5be57e" class=3D"conflue=
+nceTd">
+<p local-id=3D"41cda08b-43ec-487a-ab04-06b4cef53e5d">Leader</p></td>
+</tr>
+<tr ac:local-id=3D"c68f3ddb-e65e-428e-9433-d00fa75cabf5">
+<td data-local-id=3D"4026ba0b-6e18-416c-8996-38d238f5372b" class=3D"conflue=
+nceTd">
+<p local-id=3D"44286865-a3e4-4853-92cd-0ace4777ca3d">Sprint 2</p></td>
+<td data-local-id=3D"909f0650-674b-4c2c-a463-db59e586de41" class=3D"conflue=
+nceTd">
+<p local-id=3D"172a4c29-b713-4921-b863-9378eb8e51f3">TP2 - Conference Setup=
+: Ch=E1=BB=A9c n=C4=83ng t=E1=BA=A1o H=E1=BB=99i ngh=E1=BB=8B, qu=E1=BA=A3n=
+ l=C3=BD Track, Deadline</p></td>
+<td data-local-id=3D"07d719f5-a3f4-4332-a1eb-68f818658be3" class=3D"conflue=
+nceTd">
+<p local-id=3D"aa957d25-c074-41d7-ae64-82bfd5961d5b">Member 2</p></td>
+</tr>
+<tr ac:local-id=3D"daa4dc66-ff6d-4598-8692-b7349f402f4e">
+<td data-local-id=3D"83cbb415-fe96-4f68-91a0-55a1c7966f44" class=3D"conflue=
+nceTd">
+<p local-id=3D"0a467559-0e40-4a47-9a9a-87b2438f7781">Sprint 3</p></td>
+<td data-local-id=3D"5ef63c1b-fa0a-486e-8b6e-6e9c87fbc31b" class=3D"conflue=
+nceTd">
+<p local-id=3D"d7523698-054b-498d-838e-3111f6a7b6e2">TP3 - Submission: Ch=
+=E1=BB=A9c n=C4=83ng T=C3=A1c gi=E1=BA=A3 n=E1=BB=99p b=C3=A0i, ch=E1=BB=89=
+nh s=E1=BB=ADa b=C3=A0i, AI check ng=E1=BB=AF ph=C3=A1p</p></td>
+<td data-local-id=3D"34eaa855-5366-46dd-92f9-3988f50dbeaa" class=3D"conflue=
+nceTd">
+<p local-id=3D"5cbb13cf-73ff-45e2-9899-209b6742c39c">Member 3</p></td>
+</tr>
+<tr ac:local-id=3D"5222f9a5-58fd-4fa8-bd32-249cf277b41a">
+<td data-local-id=3D"09a52447-e61b-4d11-a0a9-e69a69abfb55" class=3D"conflue=
+nceTd">
+<p local-id=3D"8f1e5ff4-08ba-439d-a492-bb7e0c13961a">Sprint 4</p></td>
+<td data-local-id=3D"af037388-3ed8-457b-8e5f-d9e1925f5ceb" class=3D"conflue=
+nceTd">
+<p local-id=3D"4a7ae24b-dcc9-4130-a686-9f758238b30d">TP4 - Assignment: Ch=
+=E1=BB=A9c n=C4=83ng Admin ph=C3=A2n c=C3=B4ng Reviewer, check xung =C4=91=
+=E1=BB=99t l=E1=BB=A3i =C3=ADch (COI)</p></td>
+<td data-local-id=3D"834de320-ae5a-4326-b2aa-9e6d3e1469d4" class=3D"conflue=
+nceTd">
+<p local-id=3D"88e2886c-24cb-4b9a-a56e-a8bc7ddf6be9">Member 4</p></td>
+</tr>
+<tr ac:local-id=3D"66e1a7f0-a65e-4da1-8ee9-0e7840c7f2d2">
+<td data-local-id=3D"f6a80b8e-3950-475d-a823-98463d22a165" class=3D"conflue=
+nceTd">
+<p local-id=3D"27caa226-0ae3-484c-b4e9-96b70b9f6fb7">Sprint 5</p></td>
+<td data-local-id=3D"78d42871-44a6-4b94-a043-03d35b9a4601" class=3D"conflue=
+nceTd">
+<p local-id=3D"05d3725a-7b7f-4bd2-858d-bf1f8368bc5b">TP5 - Review: Ch=E1=BB=
+=A9c n=C4=83ng Reviewer ch=E1=BA=A5m =C4=91i=E1=BB=83m, nh=E1=BA=ADn x=C3=
+=A9t, AI t=C3=B3m t=E1=BA=AFt b=C3=A0i</p></td>
+<td data-local-id=3D"d6d01af9-36c4-4e44-a8d3-08950e96290e" class=3D"conflue=
+nceTd">
+<p local-id=3D"4985173f-6f9a-4b07-a003-8bc8c0edac58">Member 5</p></td>
+</tr>
+<tr ac:local-id=3D"ff428b27-4dd6-4643-84b3-6b8bb360c74e">
+<td data-local-id=3D"5ed7e119-2567-436d-a02d-9ae5fbaedf71" class=3D"conflue=
+nceTd">
+<p local-id=3D"90a3c41a-5f5a-4ae8-87b3-f63a9f08bf01">Sprint 6</p></td>
+<td data-local-id=3D"21a7d2a0-200c-433b-8b15-299f0887e28b" class=3D"conflue=
+nceTd">
+<p local-id=3D"f81ab0a9-a5e1-4135-934e-c1d883542888">TP6 - Decision: Ch=E1=
+=BB=A9c n=C4=83ng Chair duy=E1=BB=87t b=C3=A0i (Accept/Reject), g=E1=BB=ADi=
+ email th=C3=B4ng b=C3=A1o</p></td>
+<td data-local-id=3D"6422b5a1-efe5-4360-9a80-7693ed482ef5" class=3D"conflue=
+nceTd">
+<p local-id=3D"9875a219-7d84-45b3-929f-f5e1b1cf91f0">Member 6</p></td>
+</tr>
+<tr ac:local-id=3D"a1b01b56-c5ae-4bad-8f8e-176912a3447e">
+<td data-local-id=3D"e28ad675-f20e-4134-b9b0-b41d91416d52" class=3D"conflue=
+nceTd">
+<p local-id=3D"db85630d-4692-453f-836b-580b632a1bd5">Sprint 7</p></td>
+<td data-local-id=3D"88467875-674c-42ae-9557-2d52ae940295" class=3D"conflue=
+nceTd">
+<p local-id=3D"c9088a27-ac7f-4c9a-9ed5-ebef280039bf">TP7 - Proceedings: Ch=
+=E1=BB=A9c n=C4=83ng Xu=E1=BA=A5t b=E1=BA=A3n K=E1=BB=B7 y=E1=BA=BFu v=C3=
+=A0 B=C3=A1o c=C3=A1o l=E1=BB=97i ra Excel</p></td>
+<td data-local-id=3D"a1ca5cdb-d1ca-4e6d-a1cd-ac4e14df65b5" class=3D"conflue=
+nceTd">
+<p local-id=3D"1ad5df1f-5115-458f-be4c-82cea3d73bd1">Member 7</p></td>
+</tr>
+<tr ac:local-id=3D"a1757e04-e9da-4956-a69c-c1b5004ec44f">
+<td data-local-id=3D"3e21188a-13f6-40f9-b374-2771e742a7d4" class=3D"conflue=
+nceTd">
+<p local-id=3D"65546ee0-849e-4113-a277-26868cee932a">Sprint 8</p></td>
+<td data-local-id=3D"b2491d86-a0a0-4525-af35-99f541177988" class=3D"conflue=
+nceTd">
+<p local-id=3D"204aef57-ab17-469f-9e12-823b03faf428">TP8 - Integration: T=
+=C3=ADch h=E1=BB=A3p to=C3=A0n b=E1=BB=99 h=E1=BB=87 th=E1=BB=91ng, Build v=
+=C3=A0 Deploy l=C3=AAn Server</p></td>
+<td data-local-id=3D"275a8f2d-1bf4-4bf1-9d3c-4dad11b5137f" class=3D"conflue=
+nceTd">
+<p local-id=3D"f2c73027-bf1f-40b1-8cd0-59afa9d5b097">Leader</p></td>
+</tr>
+<tr ac:local-id=3D"94450811-c90e-4567-b988-fbc372f41124">
+<td data-local-id=3D"2adcbaf7-fa2e-494f-bb0d-29a6fdf59045" class=3D"conflue=
+nceTd">
+<p local-id=3D"6b805849-899d-4035-bcda-21ad119f7eab">Sprint 9</p></td>
+<td data-local-id=3D"ed7cbf06-c5d0-4ec4-95f2-2302a8df2b13" class=3D"conflue=
+nceTd">
+<p local-id=3D"bc9ed08c-6448-42f0-a073-d8d01593f7d4">TP9 - Final Report: Vi=
+=E1=BA=BFt b=C3=A1o c=C3=A1o t=E1=BB=95ng k=E1=BA=BFt, T=C3=A0i li=E1=BB=87=
+u h=C6=B0=E1=BB=9Bng d=E1=BA=ABn s=E1=BB=AD d=E1=BB=A5ng (User Guide)</p></=
+td>
+<td data-local-id=3D"14b2e53d-2336-43e6-984e-2aa017410962" class=3D"conflue=
+nceTd">
+<p local-id=3D"f8092f34-554f-4291-accf-28171fa1c235">C=E1=BA=A3 nh=C3=B3m</=
+p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr local-id=3D"80148fb2-2318-4f20-bfa8-33290f09b024">
+<h1 local-id=3D"6727a893-1262-4572-aa1a-24f7d5d028b0" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-III.SOFTWAREREQUIREMENTSPECI=
+FICATION(=C4=90=E1=BA=B6CT=E1=BA=A2Y=C3=8AUC=E1=BA=A6U)">III. SOFTWARE REQU=
+IREMENT SPECIFICATION (=C4=90=E1=BA=B6C T=E1=BA=A2 Y=C3=8AU C=E1=BA=A6U)</h=
+1>
+<p local-id=3D"4e8da800-ba03-4f47-8049-0a00ed1f05ff"><em>(Ng=C6=B0=E1=BB=9D=
+i th=E1=BB=B1c hi=E1=BB=87n: @L=C3=AA V=C4=83n =C4=90=E1=BA=A1t)</em> <em>(=
+Tham kh=E1=BA=A3o c=E1=BA=A5u tr=C3=BAc: Trang 19-84 file PDF)</em></p>
+<h2 local-id=3D"251af789-18c8-4223-a1ac-d5740bbaeb2f" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-1.Actors(Danhs=C3=A1cht=C3=
+=A1cnh=C3=A2n)">1. Actors (Danh s=C3=A1ch t=C3=A1c nh=C3=A2n)</h2>
+<p local-id=3D"73a6c031-de7b-462e-944c-2576057d6121"><em>(D=E1=BB=B1a tr=C3=
+=AAn file demo.docx)</em></p>
+<ul local-id=3D"8514fbf2-3518-44a8-b02c-ccb5d8f3555b">
+<li local-id=3D"e8c4bea4-7267-46b8-b730-78a9e8c12814">
+<p local-id=3D"7f1a27a7-d590-4572-9d60-094d9815615e"><strong>Admin:</strong=
+> Qu=E1=BA=A3n tr=E1=BB=8B h=E1=BB=87 th=E1=BB=91ng, audit logs.</p></li>
+<li local-id=3D"631e1c74-4144-48fc-9fba-014427030212">
+<p local-id=3D"7e7df983-a96d-4633-80b5-8ab695367683"><strong>Manager:</stro=
+ng> Qu=E1=BA=A3n l=C3=BD h=E1=BB=99i ngh=E1=BB=8B, t=E1=BA=A1o track.</p></=
+li>
+<li local-id=3D"c1564b28-6443-48e7-ba38-50443162101f">
+<p local-id=3D"b8f0cbfe-ea91-43c2-963d-c27afcb199ca"><strong>Author:</stron=
+g> N=E1=BB=99p b=C3=A0i, ch=E1=BB=89nh s=E1=BB=ADa, xem k=E1=BA=BFt qu=E1=
+=BA=A3.</p></li>
+<li local-id=3D"bf4eaf60-f1eb-43ce-87d7-2c7452db798a">
+<p local-id=3D"b52868ea-9058-4cb0-9fc7-d9dd4182524b"><strong>Reviewer:</str=
+ong> Ch=E1=BA=A5m =C4=91i=E1=BB=83m, nh=E1=BA=ADn x=C3=A9t b=C3=A0i b=C3=A1=
+o.</p></li>
+<li local-id=3D"8a16d5a9-d0be-4c38-98a6-476aac36a411">
+<p local-id=3D"a96ea6d9-ab1e-43d4-ae92-4af851e73a74"><strong>Chair:</strong=
+> Ra quy=E1=BA=BFt =C4=91=E1=BB=8Bnh (Accept/Reject), g=E1=BB=ADi mail.</p>=
+</li>
+</ul>
+<h2 local-id=3D"39ca3a6b-bbd2-4985-99d0-175ca93ecaa8" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-2.UseCaseDiagram(Bi=E1=BB=83=
+u=C4=91=E1=BB=93UseCase)">2. Use Case Diagram (Bi=E1=BB=83u =C4=91=E1=BB=93=
+ Use Case)</h2>
+<p local-id=3D"1f78cd65-c67b-4212-8b79-9b3026d4afd9"><strong>(Ch=C3=A8n h=
+=C3=ACnh =E1=BA=A3nh Use Case T=E1=BB=95ng qu=C3=A1t c=E1=BB=A7a c=E1=BA=A3=
+ nh=C3=B3m v=C3=A0o =C4=91=C3=A2y)</strong></p>
+<h2 local-id=3D"b5608234-983e-494a-9dcb-33aa5fefda3c" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-3.FunctionalRequirements(Chi=
+ti=E1=BA=BFtch=E1=BB=A9cn=C4=83ng)">3. Functional Requirements (Chi ti=E1=
+=BA=BFt ch=E1=BB=A9c n=C4=83ng)</h2>
+<p local-id=3D"241d9189-a6a1-4cc8-b37c-4edc015dfd65"><em>(M=C3=B4 t=E1=BA=
+=A3 chi ti=E1=BA=BFt t=E1=BB=ABng module trong demo.docx)</em></p>
+<ul local-id=3D"adeee738-68c2-4815-9e63-74b6a72bbc39">
+<li local-id=3D"5ca7b4ea-6356-4d66-b8fb-4e0c6a60242b">
+<p local-id=3D"f19e1c91-e074-4342-a41b-3865275c0a9c"><strong>Module 1 (Admi=
+n):</strong> =C4=90=C4=83ng nh=E1=BA=ADp, ph=C3=A2n quy=E1=BB=81n, xem log =
+h=E1=BB=87 th=E1=BB=91ng.</p></li>
+<li local-id=3D"af726eed-ca32-48b1-859a-782b4d3cc149">
+<p local-id=3D"ac38b3ff-5ae8-41dd-9c19-97b546fa3094"><strong>Module 2 (Conf=
+erence):</strong> T=E1=BA=A1o h=E1=BB=99i ngh=E1=BB=8B m=E1=BB=9Bi, thi=E1=
+=BA=BFt l=E1=BA=ADp deadline.</p></li>
+<li local-id=3D"bc18ec7e-f61d-4b0b-ac22-075c690cf6c6">
+<p local-id=3D"dd34768b-eaba-4e62-81f4-6ddefaea604f"><strong>Module 3 (Auth=
+or):</strong> Form n=E1=BB=99p b=C3=A0i (Title, Abstract, File PDF), Valida=
+te deadline.</p></li>
+<li local-id=3D"d8e746cd-af99-486e-84ef-1bd2fd9c553a">
+<p local-id=3D"4f0d2b35-b3af-4627-84ae-66011ff0769e"><strong>Module 4 (Assi=
+gnment):</strong> G=C3=A1n b=C3=A0i cho Reviewer, check xung =C4=91=E1=BB=
+=99t l=E1=BB=A3i =C3=ADch (COI).</p></li>
+<li local-id=3D"f6da42f8-a706-49da-9461-986058cea47f">
+<p local-id=3D"e53a6891-a5f7-42cf-a5e3-80d0019a61de"><strong>Module 5 (Revi=
+ew):</strong> Form ch=E1=BA=A5m =C4=91i=E1=BB=83m, AI t=C3=B3m t=E1=BA=AFt =
+b=C3=A0i b=C3=A1o.</p></li>
+<li local-id=3D"e5bf5272-a8eb-4a06-a1de-160827aa3938">
+<p local-id=3D"8128fc3b-082c-4e48-8730-e003357549d7"><strong>Module 6 (Deci=
+sion):</strong> Duy=E1=BB=87t b=C3=A0i, chuy=E1=BB=83n tr=E1=BA=A1ng th=C3=
+=A1i "Camera-ready".</p></li>
+</ul>
+<hr local-id=3D"f7cbcef3-6be4-4f61-89d6-883b7314118b">
+<h1 local-id=3D"083b4cff-c991-40d3-994d-5c15bf79610a" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-IV.SOFTWAREDESIGNDESCRIPTION=
+(THI=E1=BA=BETK=E1=BA=BEH=E1=BB=86TH=E1=BB=90NG)">IV. SOFTWARE DESIGN DESCR=
+IPTION (THI=E1=BA=BET K=E1=BA=BE H=E1=BB=86 TH=E1=BB=90NG)</h1>
+<h2 local-id=3D"3ceda651-9a39-4b27-9281-5c84ee69eff7" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-1.SystemArchitecture&amp;Dat=
+abase(Ki=E1=BA=BFntr=C3=BAc&amp;CSDL)">1. System Architecture &amp; Databas=
+e (Ki=E1=BA=BFn tr=C3=BAc &amp; CSDL)</h2>
+<p local-id=3D"d6e422e2-39d2-4e97-9591-17ba61fd2ed2"><em>(Ng=C6=B0=E1=BB=9D=
+i th=E1=BB=B1c hi=E1=BB=87n: @Nguy=E1=BB=85n Ti=E1=BA=BFn Ph=C3=A1t =C4=90=
+=E1=BA=A1t)</em> <em>(Tham kh=E1=BA=A3o c=E1=BA=A5u tr=C3=BAc: Trang 85-157=
+ file PDF)</em></p>
+<h3 local-id=3D"bb8794d2-f41f-46b4-96e7-9a1b84ec357d" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-1.1.Ki=E1=BA=BFntr=C3=BAch=
+=E1=BB=87th=E1=BB=91ng">1.1. Ki=E1=BA=BFn tr=C3=BAc h=E1=BB=87 th=E1=BB=91n=
+g</h3>
+<ul local-id=3D"bb14d775-451a-4db2-b666-272d12d69dde">
+<li local-id=3D"cf856aa4-7b6e-4adb-ade1-6a13ec62dd9e">
+<p local-id=3D"34d07a07-0248-4b0d-94d9-6d1716946078"><strong>Backend:</stro=
+ng> Python Flask.</p></li>
+<li local-id=3D"7460bb19-362f-46e3-bf77-296e46ee032e">
+<p local-id=3D"f7655952-c755-4652-b942-e2e1ea3e4ee8"><strong>Frontend:</str=
+ong> ReactJS / Jinja2 Templates.</p></li>
+<li local-id=3D"51feb229-0919-4019-8daf-1d3d30c1968c">
+<p local-id=3D"66a8b3af-e527-49d8-8605-9e49db9f979a"><strong>Database:</str=
+ong> PostgreSQL / SQLite.</p></li>
+</ul>
+<h3 local-id=3D"46277bca-fe26-453c-a31f-4e5b502bf9f4" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-1.2.DatabaseDesign(Thi=E1=BA=
+=BFtk=E1=BA=BFCSDL)">1.2. Database Design (Thi=E1=BA=BFt k=E1=BA=BF CSDL)</=
+h3>
+<p local-id=3D"561dd3c8-2d6a-4ff7-b4cc-0576fc5888ca"><strong>(Ch=C3=A8n =E1=
+=BA=A3nh ERD v=C3=A0o =C4=91=C3=A2y)</strong></p>
+<ul local-id=3D"3408a76b-ae40-4114-b1b5-f89f619c3624">
+<li local-id=3D"c8f2fe82-fe07-4ce7-abce-a780be540412">
+<p local-id=3D"aa0fe820-4ae5-4fa7-aece-fb7f57ca0678"><strong>M=C3=B4 t=E1=
+=BA=A3 c=C3=A1c b=E1=BA=A3ng ch=C3=ADnh (D=E1=BB=B1a tr=C3=AAn prompt AI tr=
+ong demo.docx):</strong></p>
+<ul local-id=3D"d9b022fb-3408-4300-9f54-547b4afbf4e8">
+<li local-id=3D"c430e222-a86f-405a-9212-83f5461d7b3c">
+<p local-id=3D"ca5fc77d-b601-4355-b94a-9d2dbabd223e"><code>Users</code>: (i=
+d, email, password_hash, role).</p></li>
+<li local-id=3D"8a4916b7-597b-4b6f-9762-fe27b27b6ba3">
+<p local-id=3D"64badec1-b1f1-4df6-a946-bb54e7e8dbce"><code>Conferences</cod=
+e>: (id, name, submission_deadline).</p></li>
+<li local-id=3D"3a7b7e12-32d4-46a1-801b-9bdad01b3247">
+<p local-id=3D"cb45d456-63e4-4e16-a710-dd34dcb2a789"><code>Papers</code>: (=
+id, title, abstract, file_url, status).</p></li>
+<li local-id=3D"abd5e595-991b-4541-9546-84d7ad7fcdff">
+<p local-id=3D"4f611054-cade-447c-b12d-be4ec63d1620"><code>Reviews</code>: =
+(id, paper_id, score, comment).</p></li>
+<li local-id=3D"7cfe25ec-5a18-43e5-b294-42952d4f9b39">
+<p local-id=3D"c69d619f-3eaa-4003-8495-09affed3b929"><code>Audit_logs</code=
+>: (id, user_id, action, timestamp).</p></li>
+</ul></li>
+</ul>
+<h2 local-id=3D"f7f33942-71f0-47cf-932c-b185639ab0c0" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-2.DetailedDesign(Thi=E1=BA=
+=BFtk=E1=BA=BFchiti=E1=BA=BFt)">2. Detailed Design (Thi=E1=BA=BFt k=E1=BA=
+=BF chi ti=E1=BA=BFt)</h2>
+<p local-id=3D"52bc7302-4b0e-43d3-8718-2e47b704b653"><em>(Ng=C6=B0=E1=BB=9D=
+i th=E1=BB=B1c hi=E1=BB=87n: @=C4=90=E1=BB=97 V=C5=A9 Khang)</em> <em>(Tham=
+ kh=E1=BA=A3o c=E1=BA=A5u tr=C3=BAc: Trang 158-194 file PDF)</em></p>
+<h3 local-id=3D"56a8643a-4a3d-469c-96e8-b8eddd1b37f9" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-2.1.ClassDiagram(Bi=E1=BB=83=
+u=C4=91=E1=BB=93l=E1=BB=9Bp)">2.1. Class Diagram (Bi=E1=BB=83u =C4=91=E1=BB=
+=93 l=E1=BB=9Bp)</h3>
+<p local-id=3D"d5eb5d72-7852-426c-bff4-a80395e9e123"><em>(V=E1=BA=BD s=C6=
+=A1 =C4=91=E1=BB=93 c=C3=A1c l=E1=BB=9Bp x=E1=BB=AD l=C3=BD trong Backend: =
+AuthController, PaperController...)</em></p>
+<h3 local-id=3D"a340487d-ded9-4de8-8ce7-cbe12d8e6292" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-2.2.SequenceDiagram(Bi=E1=BB=
+=83u=C4=91=E1=BB=93tu=E1=BA=A7nt=E1=BB=B1)">2.2. Sequence Diagram (Bi=E1=BB=
+=83u =C4=91=E1=BB=93 tu=E1=BA=A7n t=E1=BB=B1)</h3>
+<p local-id=3D"7e623c6a-ad3c-41b1-b2a1-9ad25f909a2b"><em>(V=E1=BA=BD lu=E1=
+=BB=93ng ch=E1=BA=A1y cho c=C3=A1c ch=E1=BB=A9c n=C4=83ng quan tr=E1=BB=8Dn=
+g)</em></p>
+<ul local-id=3D"5383f250-f031-4edf-99bc-551183fd83f7">
+<li local-id=3D"06f67c0f-d2f8-4b60-b09c-e16682a1196d">
+<p local-id=3D"f58643a0-cafe-454c-8de9-e930f982eaf2">Lu=E1=BB=93ng N=E1=BB=
+=99p b=C3=A0i (Author -&gt; System -&gt; DB).</p></li>
+<li local-id=3D"abbd6c73-4943-4f7c-bf65-07be4318ed25">
+<p local-id=3D"6ed9a0cb-8a17-45b9-a384-734c730c6420">Lu=E1=BB=93ng Duy=E1=
+=BB=87t b=C3=A0i (Chair -&gt; System -&gt; Mail Service).</p></li>
+</ul>
+<h3 local-id=3D"9604e831-3e44-4918-9201-1cc0305fb94e" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-2.3.APISpecification(Thi=E1=
+=BA=BFtk=E1=BA=BFAPI)">2.3. API Specification (Thi=E1=BA=BFt k=E1=BA=BF API=
+)</h3>
+<p local-id=3D"434abeed-809a-48ec-a341-5eefb36f2a01"><em>(Li=E1=BB=87t k=C3=
+=AA c=C3=A1c API =C4=91=C3=A3 code)</em></p>
+<ul local-id=3D"b2898ef5-2cae-4bb6-99d6-63a76d12f00e">
+<li local-id=3D"d9690667-a4f7-4535-97f3-7bca2460f517">
+<p local-id=3D"1123dab8-a936-4dce-a113-a0e705ca3c7d"><code>POST /api/login<=
+/code></p></li>
+<li local-id=3D"e4cb929b-ec62-4ff0-b082-ac58422b2f3c">
+<p local-id=3D"9fd6b9dd-3b48-4590-a0cf-09e2f51f1769"><code>POST /api/submit=
+-paper</code></p></li>
+<li local-id=3D"040f133b-3ddb-423c-b8f2-41063dd12bfb">
+<p local-id=3D"96c0c869-a822-4432-89ae-2cbf6f8cfaa1"><code>GET /api/my-assi=
+gnments</code></p></li>
+</ul>
+<hr local-id=3D"5260c4f1-e4be-490d-a296-3fd3627397f8">
+<h1 local-id=3D"a0ba250d-f939-4c4f-9cdc-78f82b8a0a73" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-V.SOFTWARETESTINGDOCUMENTATI=
+ON(KI=E1=BB=82MTH=E1=BB=AC)">V. SOFTWARE TESTING DOCUMENTATION (KI=E1=BB=82=
+M TH=E1=BB=AC)</h1>
+<p local-id=3D"0d7bb994-f506-4f01-8d66-e21808a3c642"><em>(Ng=C6=B0=E1=BB=9D=
+i th=E1=BB=B1c hi=E1=BB=87n: @Tr=E1=BA=A7n Minh Qu=C3=A2n)</em> <em>(Tham k=
+h=E1=BA=A3o c=E1=BA=A5u tr=C3=BAc: Trang 195-198 file PDF)</em></p>
+<h2 local-id=3D"e2e41fef-6762-4ee6-94eb-043538a6b80f" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-1.TestStrategy(Chi=E1=BA=BFn=
+l=C6=B0=E1=BB=A3cki=E1=BB=83mth=E1=BB=AD)">1. Test Strategy (Chi=E1=BA=BFn =
+l=C6=B0=E1=BB=A3c ki=E1=BB=83m th=E1=BB=AD)</h2>
+<ul local-id=3D"a5726cdc-58ab-4e0c-bbe1-f82fa758a027">
+<li local-id=3D"b684dff5-8634-47eb-8b55-ce04377e3ba0">
+<p local-id=3D"ecd24948-2970-4e92-a0e4-818ecfba0f3f">Ki=E1=BB=83m th=E1=BB=
+=AD ch=E1=BB=A9c n=C4=83ng (Functional Testing).</p></li>
+<li local-id=3D"00daeb58-a76d-494e-8821-9749cd914ffa">
+<p local-id=3D"20d5cca9-02e2-4028-ad9c-a7053a718bcf">Ki=E1=BB=83m th=E1=BB=
+=AD quy tr=C3=ACnh (Workflow Testing).</p></li>
+</ul>
+<h2 local-id=3D"7c84179e-68bd-44cd-bf64-5998a09ecbb1" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-2.TestPlan(K=E1=BA=BFho=E1=
+=BA=A1chTest)">2. Test Plan (K=E1=BA=BF ho=E1=BA=A1ch Test)</h2>
+<ul local-id=3D"5a3308b5-c114-4cce-bfcb-7322e2909a87">
+<li local-id=3D"691244c3-2ddd-42c9-a104-5d4cd8dde1ce">
+<p local-id=3D"df575093-e9dc-40e2-b5a7-b8489bdb6500"></p>
+<p local-id=3D"ff912904-8e46-4393-95d2-c30c47d7f9bc"><strong>C=C3=B4ng c=E1=
+=BB=A5:</strong> Log l=E1=BB=97i tr=E1=BB=B1c ti=E1=BA=BFp v=C3=A0o b=E1=BA=
+=A3ng <code>SystemBug</code> tr=C3=AAn Database.</p>
+<p local-id=3D"2446731e-c7eb-4386-b992-b6592786c889"></p></li>
+<li local-id=3D"a9951a53-8030-47a3-a29c-7f0432d7b293">
+<p local-id=3D"0e80eb17-581a-439b-a66f-ae6905530b77"><strong>Quy tr=C3=ACnh=
+:</strong> Tester ph=C3=A1t hi=E1=BB=87n l=E1=BB=97i -&gt; Log v=C3=A0o DB =
+-&gt; Dev fix -&gt; Tester verify.</p></li>
+</ul>
+<h2 local-id=3D"25a7bf31-318b-4560-bcba-6729f50eaafc" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-3.TestReports(B=C3=A1oc=C3=
+=A1ok=E1=BA=BFtqu=E1=BA=A3)">3. Test Reports (B=C3=A1o c=C3=A1o k=E1=BA=BFt=
+ qu=E1=BA=A3)</h2>
+<p local-id=3D"f43ab487-7449-4fd5-9a6b-f6eb091ccbbd"><strong>(Ch=C3=A8n =E1=
+=BA=A3nh ch=E1=BB=A5p file Excel </strong><code>Danh_sach_Loi.xlsx</code><s=
+trong> v=C3=A0o =C4=91=C3=A2y =C4=91=E1=BB=83 ch=E1=BB=A9ng minh)</strong>.=
+</p>
+<hr local-id=3D"ea47da08-5ee8-46f2-abfd-a6bc79fcb65b">
+<h1 local-id=3D"c32d4389-f1f8-4c76-b412-a3ef96351cbf" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-VI.RELEASEPACKAGE&amp;USERGU=
+IDES(H=C6=AF=E1=BB=9ANGD=E1=BA=AANS=E1=BB=ACD=E1=BB=A4NG)">VI. RELEASE PACK=
+AGE &amp; USER GUIDES (H=C6=AF=E1=BB=9ANG D=E1=BA=AAN S=E1=BB=AC D=E1=BB=A4=
+NG)</h1>
+<p local-id=3D"a3c984f0-1838-4062-a36b-fb0c0d6b4e25"><em>(Ng=C6=B0=E1=BB=9D=
+i th=E1=BB=B1c hi=E1=BB=87n: @Ng=C3=B4 Ph=C3=BA Minh H=C3=B9ng)</em> <em>(T=
+ham kh=E1=BA=A3o c=E1=BA=A5u tr=C3=BAc: Trang 199-229 file PDF)</em></p>
+<h2 local-id=3D"e66bd719-e787-4a50-81e6-b0691e4575f8" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-1.InstallationGuides(H=C6=B0=
+=E1=BB=9Bngd=E1=BA=ABnc=C3=A0i=C4=91=E1=BA=B7t)">1. Installation Guides (H=
+=C6=B0=E1=BB=9Bng d=E1=BA=ABn c=C3=A0i =C4=91=E1=BA=B7t)</h2>
+<ul local-id=3D"12b44c25-adaf-42ad-9968-b2ff0d38b16a">
+<li local-id=3D"ffceacf1-6e87-43c8-bfa2-237e267c295f">
+<p local-id=3D"a1697fec-c970-4588-bdee-57480171efc5"><strong>Y=C3=AAu c=E1=
+=BA=A7u:</strong> Python 3.8+, Node.js.</p></li>
+<li local-id=3D"462de86a-8932-447f-b276-4b20177cc83c">
+<p local-id=3D"0bd71aee-734a-4440-a0db-714e00af92e6"><strong>B=C6=B0=E1=BB=
+=9Bc 1:</strong> Clone source code.</p></li>
+<li local-id=3D"c6e0ce98-8d69-433e-8ee1-e1f076ba6b2e">
+<p local-id=3D"1206208d-575b-4e56-be49-d6f6cc67fbf8"><strong>B=C6=B0=E1=BB=
+=9Bc 2:</strong> C=C3=A0i =C4=91=E1=BA=B7t th=C6=B0 vi=E1=BB=87n: <code>pip=
+ install -r requirements.txt</code>.</p></li>
+<li local-id=3D"5fe4f044-9834-451d-a483-3fc6117c87d0">
+<p local-id=3D"0199bdcc-811b-4c06-a609-d7ba51107e03"><strong>B=C6=B0=E1=BB=
+=9Bc 3:</strong> C=E1=BA=A5u h=C3=ACnh Database &amp; Ch=E1=BA=A1y server: =
+<code>python run.py</code>.</p></li>
+</ul>
+<h2 local-id=3D"e30a0c81-b5c1-4207-ae67-a82ec69ba2fe" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-2.UserManual(H=C6=B0=E1=BB=
+=9Bngd=E1=BA=ABns=E1=BB=ADd=E1=BB=A5ng)">2. User Manual (H=C6=B0=E1=BB=9Bng=
+ d=E1=BA=ABn s=E1=BB=AD d=E1=BB=A5ng)</h2>
+<p local-id=3D"cba1a8f1-ce27-4b0f-b3b4-310e2f1ee578"><em>(Ch=E1=BB=A5p =E1=
+=BA=A3nh m=C3=A0n h=C3=ACnh c=C3=A1c ch=E1=BB=A9c n=C4=83ng =C4=91=C3=A3 l=
+=C3=A0m =C4=91=C6=B0=E1=BB=A3c)</em></p>
+<h3 local-id=3D"5f4c0523-aa97-4bde-936d-639010c5fbcb" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-2.1.D=C3=A0nhchoAdmin&amp;Ma=
+nager">2.1. D=C3=A0nh cho Admin &amp; Manager</h3>
+<ul local-id=3D"7582b11d-b03e-4d92-95c4-56decfa0757a">
+<li local-id=3D"c395852f-ce7c-42a9-91a5-1680554bcffd">
+<p local-id=3D"184b2e74-c938-4cca-96b7-782d5b738581">=C4=90=C4=83ng nh=E1=
+=BA=ADp h=E1=BB=87 th=E1=BB=91ng.</p></li>
+<li local-id=3D"b3ef6cb4-1135-454f-a9e5-d706f8a80bea">
+<p local-id=3D"9ae9aec1-6c73-4af5-8435-b1a1bce227a4">T=E1=BA=A1o h=E1=BB=99=
+i ngh=E1=BB=8B m=E1=BB=9Bi v=C3=A0 thi=E1=BA=BFt l=E1=BA=ADp deadline.</p><=
+/li>
+</ul>
+<h3 local-id=3D"32b6886d-28c5-499c-a8d9-5388a7fc6331" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-2.2.D=C3=A0nhchoT=C3=A1cgi=
+=E1=BA=A3(Author)">2.2. D=C3=A0nh cho T=C3=A1c gi=E1=BA=A3 (Author)</h3>
+<ul local-id=3D"b6c1d723-fd27-45cf-86e6-afee3043e473">
+<li local-id=3D"c349bb4c-8bb6-48be-90f2-78549378b5d8">
+<p local-id=3D"ba1d2512-65ca-4dd8-bd81-f9cdcb1ed287">=C4=90=C4=83ng k=C3=BD=
+ t=C3=A0i kho=E1=BA=A3n.</p></li>
+<li local-id=3D"7640b8db-ca6b-4750-b787-232ca80a41d0">
+<p local-id=3D"d1b705f9-e713-43c2-852a-4e6b1be5710b">N=E1=BB=99p b=C3=A0i b=
+=C3=A1o m=E1=BB=9Bi (K=C3=A8m =E1=BA=A3nh form n=E1=BB=99p).</p></li>
+</ul>
+<h3 local-id=3D"16507c3f-c68a-44e3-ae22-c02c197ca6b1" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-2.3.D=C3=A0nhchoReviewer&amp=
+;Chair">2.3. D=C3=A0nh cho Reviewer &amp; Chair</h3>
+<ul local-id=3D"6603ffd2-379e-434f-b747-a3e904f1aa00">
+<li local-id=3D"f8bd6e1d-c040-4742-973b-e4e7bf8c3924">
+<p local-id=3D"3465434c-81ec-4173-8aa3-51e7cbff57d3">Reviewer v=C3=A0o ch=
+=E1=BA=A5m =C4=91i=E1=BB=83m b=C3=A0i =C4=91=C6=B0=E1=BB=A3c ph=C3=A2n c=C3=
+=B4ng.</p></li>
+<li local-id=3D"43157e87-79fd-4409-a150-97777549e43c">
+<p local-id=3D"332f23da-ead1-4c2c-a2b8-9acbd02199c2">Chair v=C3=A0o duy=E1=
+=BB=87t b=C3=A0i (Accept/Reject).</p></li>
+</ul>
+<h3 local-id=3D"511982ef-d18d-4817-b837-8de17c6b3a5a" id=3D"B=C3=81OC=C3=81=
+OT=E1=BB=94NGK=E1=BA=BET=C4=90=E1=BB=92=C3=81N-2.4.Ch=E1=BB=A9cn=C4=83ngB=
+=C3=A1oc=C3=A1o(TP7)">2.4. Ch=E1=BB=A9c n=C4=83ng B=C3=A1o c=C3=A1o (TP7)</=
+h3>
+<p local-id=3D"6bd92e39-e68c-4064-bedd-9f42782ab090"><strong>(=C4=90=C3=A2y=
+ l=C3=A0 ph=E1=BA=A7n code c=E1=BB=A7a b=E1=BA=A1n - L=C3=A0m th=E1=BA=ADt =
+k=E1=BB=B9)</strong></p>
+<ul local-id=3D"a3641fe7-d047-4e0d-8bb7-847de084e593">
+<li local-id=3D"ed87b799-a7d0-426e-881b-3d99c820342f">
+<p local-id=3D"676331e5-9bb9-4828-b914-174f12ec5f66"><strong>Xu=E1=BA=A5t K=
+=E1=BB=B7 y=E1=BA=BFu:</strong> B=E1=BA=A5m n=C3=BAt "Export Proceedings" -=
+&gt; H=E1=BB=87 th=E1=BB=91ng xu=E1=BA=A5t file Excel danh s=C3=A1ch b=C3=
+=A0i Accepted.</p></li>
+<li local-id=3D"b175a337-09be-465b-81b5-064b052d4c84">
+<p local-id=3D"70d21cc0-d46a-452a-b409-af62b6b3b65a"><strong>(D=C3=A1n =E1=
+=BA=A3nh file Excel </strong><code>Ky_Yeu_Hoi_Nghi.xlsx</code><strong> m=E1=
+=BB=9F l=C3=AAn =C4=91=E1=BB=83 khoe k=E1=BA=BFt qu=E1=BA=A3).</strong></p>=
+</li>
+</ul>
+    </div>
+</body>
+</html>
+------=_Part_72_1591674167.1766655802811--
