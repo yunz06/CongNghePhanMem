@@ -1,0 +1,7 @@
+# UTH-ConfMS Dependencies
+# [TP1] Auth System, Audit Logs, User Management
+
+Flask==3.0.0
+Flask-SQLAlchemy==3.1.1
+Flask-CORS==4.0.0
+Werkzeug==3.0.1
