@@ -4,7 +4,7 @@ UTH-ConfMS - Main Flask Application
 
 Author: Member 1 - Leader & System
 """
-
+from routes.conference_routes import conference_bp
 from flask import Flask
 from flask_cors import CORS
 from models import db, User
@@ -17,6 +17,8 @@ from routes.admin import admin_bp
 
 def create_app():
     app = Flask(__name__)
+    app.register_blueprint(conference_bp)
+
 
     # Cấu hình
     app.config['SECRET_KEY'] = 'uth-confms-secret-key-2024'

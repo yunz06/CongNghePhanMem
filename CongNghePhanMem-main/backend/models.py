@@ -65,6 +65,11 @@ class AuditLog(db.Model):
 
     def __repr__(self):
         return f'<AuditLog {self.action}>'
+from datetime import datetime
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
 class Conference(db.Model):
     __tablename__ = "conferences"
 
@@ -74,6 +79,7 @@ class Conference(db.Model):
     start_date = db.Column(db.Date, nullable=False)
     end_date = db.Column(db.Date, nullable=False)
     submission_deadline = db.Column(db.DateTime, nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
 
 class Track(db.Model):
@@ -81,6 +87,14 @@ class Track(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255), nullable=False)
-    conference_id = db.Column(db.Integer, db.ForeignKey("conferences.id"))
 
-    conference = db.relationship("Conference", backref="tracks")
+    conference_id = db.Column(
+        db.Integer,
+        db.ForeignKey("conferences.id"),
+        nullable=False
+    )
+
+    conference = db.relationship(
+        "Conference",
+        backref=db.backref("tracks", lazy=True)
+    )
