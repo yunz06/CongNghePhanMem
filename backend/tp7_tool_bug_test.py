@@ -1,91 +1,78 @@
-#Member 7 ( Minh Hùng ), Xuất file kỷ yếu và file bug
+# TP7 - Xuất Kỷ Yếu & Bug Report
+# Member 7 - Minh Hùng (đã chỉnh cho UTH-ConfMS)
+
+import requests
 import pandas as pd
 from datetime import datetime
-import os
-import sys
 
-# --- CẤU HÌNH IMPORT ---
-# Thêm đường dẫn để tìm thấy file app.py bên cạnh
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+API_BASE = "http://127.0.0.1:5000/api/decision"
 
-# Import từ file app.py của bạn
-try:
-    from app import app, db, SystemBug
-    print("✅ Đã tìm thấy app và bảng SystemBug!")
-except ImportError as e:
-    print("❌ Lỗi: Không tìm thấy file app.py hoặc class SystemBug.")
-    print(f"Chi tiết: {e}")
-    exit()
+def export_tp7():
+    print("⏳ Bắt đầu Tool TP7...")
 
-# --- HÀM XUẤT DỮ LIỆU ---
+    # ==============================
+    # PHẦN 1: XUẤT KỶ YẾU (THẬT)
+    # ==============================
+    try:
+        print("👉 Đang lấy danh sách bài báo từ Backend...")
+        res = requests.get(f"{API_BASE}/papers")
 
-def export_tool():
-    print("⏳ Đang khởi động Tool TP7...")
-    
-    # BẮT BUỘC: Dùng app_context để chui vào Database SQLite
-    with app.app_context():
-        
-        # ==========================================
-        # PHẦN 1: XUẤT BUG REPORT (DỮ LIỆU THẬT 100%)
-        # ==========================================
-        try:
-            print("--> Đang truy vấn bảng system_bugs trong database...")
-            bugs = SystemBug.query.all()
-            
-            bug_data = []
-            if bugs:
-                for b in bugs:
-                    # Lấy thông tin người báo lỗi (nếu có)
-                    reporter_id = b.reported_by if b.reported_by else "Anonymous"
-                    
-                    bug_data.append({
-                        "Bug ID": b.id,
-                        "Tiêu đề": b.title,
-                        "Mô tả chi tiết": b.description,
-                        "Trạng thái": b.status,
-                        "Người báo (ID)": reporter_id
-                    })
-                print(f"    Tìm thấy {len(bugs)} lỗi trong hệ thống.")
-            else:
-                print("    ⚠️ Database kết nối thành công nhưng CHƯA CÓ LỖI NÀO (Bảng rỗng).")
-                # Tạo một dòng mẫu để file Excel không bị trống trơn (để còn chụp ảnh)
-                bug_data.append({
-                    "Bug ID": "MẪU", "Tiêu đề": "Chưa có dữ liệu thật", 
-                    "Mô tả": "Hãy nhập thử lỗi vào Database", "Trạng thái": "N/A", "Người báo": ""
-                })
+        if res.status_code != 200:
+            print("❌ Không lấy được dữ liệu bài báo")
+            return
 
-            # Xuất ra Excel
-            df_bugs = pd.DataFrame(bug_data)
-            file_bugs = "Danh_sach_Loi_He_thong.xlsx"
-            df_bugs.to_excel(file_bugs, index=False)
-            print(f"✅ ĐÃ XONG! File lỗi thật: {file_bugs}")
+        papers = res.json()["data"]
 
-        except Exception as e:
-            print(f"❌ Lỗi khi xuất Bug: {e}")
+        accepted = [
+            {
+                "Mã bài": p["id"],
+                "Tên bài": p["title"],
+                "Tác giả": p["author"],
+                "Điểm": p["score"],
+                "Trạng thái": p["status"]
+            }
+            for p in papers if p["status"] == "ACCEPTED"
+        ]
 
-        # ==========================================
-        # PHẦN 2: XUẤT KỶ YẾU (DỮ LIỆU GIẢ - VÌ THIẾU BẢNG PAPER)
-        # ==========================================
-        try:
-            # Vì trong app.py của bạn KHÔNG CÓ class Paper, nên tôi dùng dữ liệu giả
-            # để bạn có file nộp báo cáo.
-            print("--> Đang tạo giả lập Kỷ yếu (Do chưa có bảng Paper)...")
-            
-            fake_papers = [
-                {"ID": 101, "Title": "Nghiên cứu AI 2024", "Author": "Nguyễn Văn A", "Track": "CNTT", "Status": "Accepted"},
-                {"ID": 102, "Title": "Blockchain Finance", "Author": "Trần Thị B", "Track": "Kinh tế", "Status": "Accepted"},
-                {"ID": 105, "Title": "Cyber Security", "Author": "Lê Văn C", "Track": "An toàn", "Status": "Accepted"},
-            ]
-            
-            df_papers = pd.DataFrame(fake_papers)
-            file_proceedings = f"Ky_Yeu_Hoi_Nghi_{datetime.now().strftime('%Y%m%d')}.xlsx"
-            df_papers.to_excel(file_proceedings, index=False)
-            print(f"✅ ĐÃ XONG! File kỷ yếu (Demo): {file_proceedings}")
-            
-        except Exception as e:
-            print(f"❌ Lỗi khi xuất Kỷ yếu: {e}")
+        if not accepted:
+            accepted.append({
+                "Mã bài": "N/A",
+                "Tên bài": "Chưa có bài được duyệt",
+                "Tác giả": "",
+                "Điểm": "",
+                "Trạng thái": ""
+            })
 
-# --- CHẠY ---
+        df = pd.DataFrame(accepted)
+        file_kyyeu = f"KyYeu_HoiNghi_{datetime.now().strftime('%Y%m%d')}.xlsx"
+        df.to_excel(file_kyyeu, index=False)
+
+        print(f"✅ Xuất kỷ yếu thành công: {file_kyyeu}")
+
+    except Exception as e:
+        print("❌ Lỗi xuất kỷ yếu:", e)
+
+    # ==============================
+    # PHẦN 2: BUG REPORT (MÔ PHỎNG)
+    # ==============================
+    try:
+        print("👉 Tạo Bug Report mô phỏng...")
+
+        bugs = [
+            {"Bug ID": 1, "Mô tả": "Không đăng nhập được khi sai mật khẩu", "Trạng thái": "Fixed"},
+            {"Bug ID": 2, "Mô tả": "Không gửi mail khi thiếu App Password", "Trạng thái": "Fixed"},
+            {"Bug ID": 3, "Mô tả": "Reset bị chặn khi chưa login admin", "Trạng thái": "Known issue"}
+        ]
+
+        df_bug = pd.DataFrame(bugs)
+        file_bug = "DanhSachBug_TP7.xlsx"
+        df_bug.to_excel(file_bug, index=False)
+
+        print(f"✅ Xuất Bug Report thành công: {file_bug}")
+
+    except Exception as e:
+        print("❌ Lỗi xuất bug:", e)
+
 if __name__ == "__main__":
-    export_tool()
-    print("\n👉 Kiểm tra thư mục để lấy 2 file Excel nhé!")
+    export_tp7()
+    print("\n🎯 Hoàn tất TP7 – kiểm tra file Excel trong thư mục.")
