@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, session
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from models import db, User, Role, UserRole
@@ -38,11 +38,11 @@ def register():
     db.session.add(UserRole(user_id=user.id, role_id=role.id))
     db.session.commit()
 
-    return jsonify({"message": "User registered successfully"})
+    return jsonify({"message": "User registered successfully"}), 201
 
 
 # =====================
-# LOGIN
+# LOGIN (LƯU SESSION)
 # =====================
 @auth_bp.route("/login", methods=["POST"])
 def login():
@@ -57,8 +57,21 @@ def login():
 
     roles = [role.name for role in user.roles]
 
+    # 🔐 LƯU SESSION
+    session["user_id"] = user.id
+    session["roles"] = roles
+
     return jsonify({
         "message": "Login successful",
         "user_id": user.id,
         "roles": roles
     })
+
+
+# =====================
+# LOGOUT
+# =====================
+@auth_bp.route("/logout", methods=["POST"])
+def logout():
+    session.clear()
+    return jsonify({"message": "Logout successful"})
