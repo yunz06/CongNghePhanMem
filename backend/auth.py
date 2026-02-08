@@ -14,13 +14,12 @@ def register():
 
     email = data.get("email")
     password = data.get("password")
-    role_name = data.get("role", "author")
 
     if not email or not password:
-        return jsonify({"message": "Missing email or password"}), 400
+        return jsonify({"message": "Thiếu email hoặc mật khẩu"}), 400
 
     if User.query.filter_by(email=email).first():
-        return jsonify({"message": "Email already exists"}), 400
+        return jsonify({"message": "Email đã tồn tại"}), 400
 
     user = User(
         email=email,
@@ -29,16 +28,17 @@ def register():
     db.session.add(user)
     db.session.commit()
 
-    role = Role.query.filter_by(name=role_name).first()
+    # 🔹 Role mặc định là STUDENT
+    role = Role.query.filter_by(name="student").first()
     if not role:
-        role = Role(name=role_name)
+        role = Role(name="student")
         db.session.add(role)
         db.session.commit()
 
     db.session.add(UserRole(user_id=user.id, role_id=role.id))
     db.session.commit()
 
-    return jsonify({"message": "User registered successfully"}), 201
+    return jsonify({"message": "Đăng ký sinh viên thành công"}), 201
 
 
 # =====================

@@ -44,8 +44,18 @@ class Paper(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255), nullable=False)
     abstract = db.Column(db.Text)
-    status = db.Column(db.String(50), default="submitted")
+
+    file_path = db.Column(db.String(255))        
+    status = db.Column(db.String(50), default="SUBMITTED")
+
+    author_id = db.Column(                     
+        db.Integer,
+        db.ForeignKey("users.id"),
+        nullable=False
+    )
+
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
+
 
 
 # =====================
@@ -83,6 +93,18 @@ class Decision(db.Model):
     __tablename__ = "decisions"
 
     id = db.Column(db.Integer, primary_key=True)
-    paper_id = db.Column(db.Integer, db.ForeignKey("papers.id"))
-    result = db.Column(db.String(50))
+
+    paper_id = db.Column(
+        db.Integer,
+        db.ForeignKey("papers.id"),
+        nullable=False,
+        unique=True          # 1 paper = 1 decision
+    )
+
+    score = db.Column(db.Float, default=0)        
+    status = db.Column(
+        db.String(50),
+        default="PENDING"     # PENDING | ACCEPTED | REJECTED
+    )
+
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
