@@ -1,248 +1,197 @@
 import streamlit as st
 import requests
+import time
 
-# =====================
-# API CONFIG (DÙNG MOCK)
-# =====================
-API_BASE = "http://127.0.0.1:5000/api"
-API_AUTH_LOGIN = f"{API_BASE}/auth/login"
-API_AUTH_LOGOUT = f"{API_BASE}/auth/logout"
-API_AUTH_REGISTER = f"{API_BASE}/auth/register"
+# --- CẤU HÌNH ---
+API_BASE = "http://127.0.0.1:5000/api/decision"
+st.set_page_config(page_title="Cổng thông tin UTH", layout="wide", page_icon="🎓")
 
-API_PAPER_SUBMIT = f"{API_BASE}/papers/submit"      # sinh viên nộp
-API_DECISION_PAPERS = f"{API_BASE}/decision/papers" # admin xem (MOCK)
-API_DECISION_MAKE = f"{API_BASE}/decision/make"
-API_DECISION_EXPORT = f"{API_BASE}/decision/export"
-API_DECISION_RESET = f"{API_BASE}/decision/reset"
-API_MAIL = f"{API_BASE}/decision/send-email"
+# --- CSS (Ẩn Sidebar khi chưa Login & Làm đẹp) ---
+st.markdown("""
+<style>
+    [data-testid="stSidebar"] { display: none; }
+    %s
+    .main-header { font-size: 28px; color: #003366; font-weight: bold; text-align: center; margin-bottom: 20px; }
+    .status-box { padding: 5px; border-radius: 5px; text-align: center; font-weight: bold; }
+    .accepted { background-color: #d4edda; color: #155724; }
+    .rejected { background-color: #f8d7da; color: #721c24; }
+    .waiting { background-color: #fff3cd; color: #856404; }
+</style>
+""" % ("" if not st.session_state.get('logged_in') else "[data-testid='stSidebar'] { display: block !important; }"), unsafe_allow_html=True)
 
-# =====================
-# PAGE CONFIG
-# =====================
-st.set_page_config(
-    page_title="UTH-ConfMS",
-    page_icon="📄",
-    layout="wide"
-)
+# --- QUẢN LÝ STATE ---
+if 'logged_in' not in st.session_state: st.session_state.logged_in = False
+if 'role' not in st.session_state: st.session_state.role = "" 
+if 'user_email' not in st.session_state: st.session_state.user_email = ""
+if 'user_pass' not in st.session_state: st.session_state.user_pass = ""
 
-# =====================
-# SESSION INIT
-# =====================
-if "logged_in" not in st.session_state:
-    st.session_state.logged_in = False
-
-if "roles" not in st.session_state:
-    st.session_state.roles = []
-
-if "http" not in st.session_state:
-    st.session_state.http = requests.Session()
-
-# =====================
-# SIDEBAR - AUTH
-# =====================
-st.sidebar.title("🔑 TÀI KHOẢN")
-
-if not st.session_state.logged_in:
-    auth_mode = st.sidebar.radio(
-        "Chọn chức năng",
-        ["Đăng nhập", "Đăng ký sinh viên"]
-    )
-else:
-    auth_mode = None
-
-# ======================================================
-# REGISTER - SINH VIÊN
-# ======================================================
-if auth_mode == "Đăng ký sinh viên":
-    st.header("📝 ĐĂNG KÝ SINH VIÊN")
-
-    email = st.text_input("📧 Email sinh viên")
-    password = st.text_input("🔑 Mật khẩu", type="password")
-
-    if st.button("✅ Đăng ký"):
-        res = requests.post(
-            API_AUTH_REGISTER,
-            json={"email": email, "password": password}
-        )
-
-        if res.status_code == 201:
-            st.success("🎉 Đăng ký thành công")
-        else:
-            st.error(res.json().get("message", "Lỗi đăng ký"))
-
-    st.stop()
-
-# ======================================================
-# LOGIN
-# ======================================================
-if auth_mode == "Đăng nhập":
-    st.header("🔐 ĐĂNG NHẬP")
-
-    email = st.text_input("📧 Email")
-    password = st.text_input("🔑 Mật khẩu", type="password")
-
-    if st.button("🚀 Đăng nhập"):
-        res = st.session_state.http.post(
-            API_AUTH_LOGIN,
-            json={"email": email, "password": password}
-        )
-
-        if res.status_code == 200:
-            data = res.json()
-            st.session_state.logged_in = True
-            st.session_state.roles = data.get("roles", [])
-            st.success("✅ Đăng nhập thành công")
-            st.rerun()
-        else:
-            st.error("❌ Sai email hoặc mật khẩu")
-
-    st.stop()
-
-# ======================================================
-# SIDEBAR - SAU LOGIN
-# ======================================================
-with st.sidebar:
-    st.write(f"👤 **Roles:** {', '.join(st.session_state.roles)}")
-
-    if st.button("🚪 Logout"):
-        st.session_state.http.post(API_AUTH_LOGOUT)
-        st.session_state.clear()
-        st.rerun()
-
-# ======================================================
-# SIDEBAR - ADMIN PANEL
-# ======================================================
-sender_email = ""
-sender_pass = ""
-
-if "admin" in st.session_state.roles:
+# ==========================================
+# DASHBOARD CHO ADMIN
+# ==========================================
+def admin_dashboard():
     with st.sidebar:
+        st.image("https://portal.ut.edu.vn/images/logo_full.png", width=200)
+        st.info(f"Admin: {st.session_state.user_email}")
+        
+        if st.button("🚪 Đăng xuất"):
+            st.session_state.logged_in = False
+            st.rerun()
+            
         st.divider()
-        st.title("⚙️ ADMIN PANEL")
+        
+        # NÚT XUẤT EXCEL
+        st.write("### Công cụ")
+        if st.button("📥 Xuất Kỷ Yếu (.xlsx)"):
+            try:
+                res = requests.get(f"{API_BASE}/export")
+                if res.status_code == 200:
+                    st.download_button(
+                        label="Bấm vào đây để tải về máy",
+                        data=res.content,
+                        file_name="KyYeu_HoiNghi.xlsx",
+                        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        type="primary"
+                    )
+                else:
+                    st.error(f"Lỗi Server: {res.json().get('message', 'Không rõ')}")
+            except Exception as e: st.error(f"Lỗi kết nối: {e}")
 
-        st.subheader("📧 Cấu hình Email")
-        sender_email = st.text_input("Gmail Admin")
-        sender_pass = st.text_input("App Password", type="password")
+        if st.button("🔄 Reset Dữ liệu"):
+            requests.post(f"{API_BASE}/reset")
+            st.rerun()
 
-        st.divider()
+    st.markdown('<div class="main-header">📋 HỘI ĐỒNG XÉT DUYỆT</div>', unsafe_allow_html=True)
+    
+    try:
+        papers = requests.get(f"{API_BASE}/papers").json().get('data', [])
+    except: papers = []
 
-        if st.button("📥 Xuất file Excel"):
-            res = st.session_state.http.get(API_DECISION_EXPORT)
-            if res.status_code == 200:
-                st.download_button(
-                    "⬇️ Tải KyYeu.xlsx",
-                    data=res.content,
-                    file_name="KyYeu.xlsx"
-                )
-            else:
-                st.error("❌ Không xuất được file")
+    # Thống kê (Đã fix thụt lề c2.metric)
+    c1, c2, c3 = st.columns(3)
+    c1.metric("Tổng hồ sơ", len(papers))
+    c2.metric("Đã Duyệt", len([p for p in papers if p['status']=='ACCEPTED']))
+    c3.metric("Chờ xử lý", len([p for p in papers if p['status']=='REVIEWED']))
+    st.write("---")
 
-        if st.button("🔄 Reset dữ liệu"):
-            res = st.session_state.http.post(API_DECISION_RESET)
-            if res.status_code == 200:
-                st.success("✅ Đã reset dữ liệu")
-                st.rerun()
-            else:
-                st.error("❌ Reset thất bại")
-
-# ======================================================
-# MAIN CONTENT
-# ======================================================
-st.markdown(
-    "<h1 style='text-align:center'>📋 HỆ THỐNG XÉT DUYỆT HỘI NGHỊ</h1>",
-    unsafe_allow_html=True
-)
-
-# =====================
-# SINH VIÊN NỘP BÀI
-# =====================
-if "student" in st.session_state.roles:
-    st.subheader("📄 NỘP BÀI BÁO (SINH VIÊN)")
-
-    with st.form("submit_paper"):
-        title = st.text_input("📝 Tiêu đề bài báo")
-        abstract = st.text_area("📌 Tóm tắt nội dung")
-        file = st.file_uploader("📎 Upload file", type=["pdf", "docx"])
-        submit = st.form_submit_button("📤 Nộp bài")
-
-    if submit:
-        if not file:
-            st.error("❌ Chưa upload file")
-        else:
-            files = {"file": (file.name, file.getvalue())}
-            data = {"title": title, "abstract": abstract}
-
-            res = st.session_state.http.post(
-                API_PAPER_SUBMIT,
-                data=data,
-                files=files
-            )
-
-            if res.status_code == 201:
-                st.success("✅ Nộp bài thành công")
-            else:
-                st.error(res.json().get("message", "❌ Lỗi nộp bài"))
-
-# =====================
-# ADMIN DUYỆT BÀI (MOCK)
-# =====================
-if "admin" in st.session_state.roles:
-    st.divider()
-    st.subheader("📑 DANH SÁCH BÀI BÁO (ADMIN)")
-
-    res = st.session_state.http.get(API_DECISION_PAPERS)
-    papers = res.json().get("data", [])
-
+    # Danh sách bài báo
     for p in papers:
         with st.container(border=True):
-            col1, col2 = st.columns([4, 1])
-
+            col1, col2, col3 = st.columns([3, 1, 1.5])
+            
             with col1:
-                st.subheader(p["title"])
-                st.write(f"👤 **Tác giả:** {p['author']}")
-                st.write(f"⭐ **Điểm:** {p['score']}")
+                st.subheader(p['title'])
+                st.caption(f"Tác giả: {p['author']} | File: {p.get('filename','N/A')}")
+                
+                if p['status'] != 'REVIEWED':
+                    with st.expander("📧 Gửi Email kết quả"):
+                        email_to = st.text_input("Gửi tới:", value=p['author'], key=f"m_{p['id']}")
+                        if st.button("Gửi ngay", key=f"s_{p['id']}"):
+                            with st.spinner("Đang gửi..."):
+                                res = requests.post(f"{API_BASE}/send-email", json={
+                                    "id": p['id'], "email_to": email_to,
+                                    "sender_email": st.session_state.user_email,
+                                    "sender_pass": st.session_state.user_pass
+                                })
+                                if res.status_code == 200: st.toast("Đã gửi mail!", icon="✅")
+                                else: st.error("Lỗi gửi mail!")
 
             with col2:
-                if p["status"] == "ACCEPTED":
-                    st.success("Đã duyệt")
-                elif p["status"] == "REJECTED":
-                    st.error("Bị loại")
-                else:
-                    st.warning("Chờ duyệt")
+                if p['status']=='ACCEPTED': st.markdown('<div class="status-box accepted">Đã Duyệt</div>', unsafe_allow_html=True)
+                elif p['status']=='REJECTED': st.markdown('<div class="status-box rejected">Đã Loại</div>', unsafe_allow_html=True)
+                else: st.markdown('<div class="status-box waiting">Chờ duyệt</div>', unsafe_allow_html=True)
 
-            if p["status"] == "REVIEWED":
-                c1, c2 = st.columns(2)
+            with col3:
+                if p['status']=='REVIEWED':
+                    c_ok, c_no = st.columns(2)
+                    if c_ok.button("✅", key=f"ok_{p['id']}"):
+                        requests.post(f"{API_BASE}/make", json={"paper_id": p['id'], "decision": "ACCEPTED"})
+                        st.rerun()
+                    if c_no.button("❌", key=f"no_{p['id']}"):
+                        requests.post(f"{API_BASE}/make", json={"paper_id": p['id'], "decision": "REJECTED"})
+                        st.rerun()
 
-                if c1.button("✅ Duyệt", key=f"ok_{p['id']}"):
-                    st.session_state.http.post(
-                        API_DECISION_MAKE,
-                        json={"paper_id": p["id"], "decision": "ACCEPTED"}
-                    )
-                    st.rerun()
+# ==========================================
+# DASHBOARD CHO SINH VIÊN
+# ==========================================
+def student_dashboard():
+    with st.sidebar:
+        st.image("https://portal.ut.edu.vn/images/logo_full.png", width=200)
+        st.success(f"SV: {st.session_state.user_email}")
+        if st.button("🚪 Đăng xuất"):
+            st.session_state.logged_in = False
+            st.rerun()
 
-                if c2.button("❌ Loại", key=f"no_{p['id']}"):
-                    st.session_state.http.post(
-                        API_DECISION_MAKE,
-                        json={"paper_id": p["id"], "decision": "REJECTED"}
-                    )
-                    st.rerun()
+    st.markdown('<div class="main-header">📤 NỘP ĐỀ TÀI KHOA HỌC</div>', unsafe_allow_html=True)
+    
+    with st.form("submit_form", clear_on_submit=True):
+        st.write("Điền thông tin đề tài:")
+        # Fix thụt lề f_title
+        f_title = st.text_input("Tên đề tài")
+        f_abstract = st.text_area("Tóm tắt nội dung")
+        f_file = st.file_uploader("File báo cáo", type=['pdf', 'docx'])
+        
+        if st.form_submit_button("🚀 Gửi hồ sơ", type="primary", use_container_width=True):
+            if not f_title or not f_file: st.error("Thiếu thông tin!")
+            else:
+                files = {'file': (f_file.name, f_file.getvalue(), f_file.type)}
+                data = {'title': f_title, 'abstract': f_abstract, 'author': st.session_state.user_email}
+                requests.post(f"{API_BASE}/submit", data=data, files=files)
+                st.success("Nộp thành công! Hãy đợi Admin duyệt.")
 
-            if p["status"] == "ACCEPTED":
-                with st.expander("📧 Gửi Email"):
-                    email_to = st.text_input("Email tác giả", key=f"mail_{p['id']}")
+# ==========================================
+# TRANG LOGIN / REGISTER
+# ==========================================
+def auth_page():
+    c1, c2, c3 = st.columns([1, 2, 1])
+    with c2:
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.image("https://portal.ut.edu.vn/images/logo_full.png", use_container_width=True)
+        st.markdown("<h3 style='text-align:center; color:#003366'>CỔNG THÔNG TIN ĐIỆN TỬ</h3>", unsafe_allow_html=True)
+        
+        tab1, tab2, tab3 = st.tabs(["🎓 SV Đăng Nhập", "📝 SV Đăng Ký", "🛡️ Admin Login"])
 
-                    if st.button("Gửi", key=f"send_{p['id']}"):
-                        res = st.session_state.http.post(
-                            API_MAIL,
-                            json={
-                                "id": p["id"],
-                                "email_to": email_to,
-                                "sender_email": sender_email,
-                                "sender_pass": sender_pass
-                            }
-                        )
+        with tab1:
+            with st.form("sv_log"):
+                e = st.text_input("Email SV")
+                p = st.text_input("Mật khẩu", type="password")
+                if st.form_submit_button("Đăng nhập", type="primary", use_container_width=True):
+                    res = requests.post(f"{API_BASE}/student/login", json={"email":e, "password":p})
+                    if res.status_code==200:
+                        st.session_state.logged_in=True
+                        st.session_state.role="student"
+                        st.session_state.user_email=e
+                        st.rerun()
+                    else: st.error("Sai thông tin!")
 
-                        if res.status_code == 200:
-                            st.success("✅ Đã gửi email")
-                        else:
-                            st.error("❌ Gửi email thất bại")
+        with tab2:
+            with st.form("sv_reg"):
+                re = st.text_input("Email")
+                rp = st.text_input("Mật khẩu", type="password")
+                r2 = st.text_input("Nhập lại mật khẩu", type="password")
+                if st.form_submit_button("Đăng ký", use_container_width=True):
+                    if rp!=r2: st.error("Mật khẩu không khớp")
+                    else:
+                        requests.post(f"{API_BASE}/student/register", json={"email":re, "password":rp})
+                        st.success("Đăng ký thành công! Hãy đăng nhập.")
+
+        with tab3:
+            with st.form("ad_log"):
+                ae = st.text_input("Gmail Admin")
+                ap = st.text_input("App Password", type="password")
+                if st.form_submit_button("Vào Hội Đồng", type="secondary", use_container_width=True):
+                    # Fix thụt lề res ở đây
+                    res = requests.post(f"{API_BASE}/admin/login", json={"email":ae, "password":ap})
+                    if res.status_code==200:
+                        st.session_state.logged_in=True
+                        st.session_state.role="admin"
+                        st.session_state.user_email=ae
+                        st.session_state.user_pass=ap
+                        st.rerun()
+                    else: st.error("Sai thông tin Admin!")
+
+# Điều hướng chính
+if not st.session_state.logged_in:
+    auth_page()
+else:
+    if st.session_state.role == "student": student_dashboard()
+    else: admin_dashboard()
